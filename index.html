@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Onyekachi | Web Developer</title>
+    <meta name="description" content="a web designer and developer">
+    <link rel="stylesheet" href="stylesheet/css/lib/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto+Condensed&family=Ubuntu&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+        <link rel="stylesheet" href="stylesheet/css/fa/all.css">
+
+        <script src="stylesheet/js/lib/jquery.min.js"></script>
+        <script src="stylesheet/js/lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stylesheet/css/main.css">
+</head>
+<body>
+    <div class="loader-container" >
+        <div id="background"></div>
+        <div id="logocontainer">
+        <div id="pelogo">o<span class="next-o">o</span> </div>
+        <div class="loader" style="left:2vh; top:0; height:2vh; width:0; animation:slide1 1.3s linear forwards infinite"></div>
+        <div class="loader" style="right:0; top:2vh; width:2vh; height:0; animation:slide2 1.3s linear forwards infinite; animation-delay:0.65s"></div>
+        <div class="loader" style="right:2vh; bottom:0; height:2vh; width:0; animation:slide3 1.3s linear forwards infinite"></div>
+        <div class="loader" style="left:0; bottom:2vh; width:2vh; height:0; animation:slide4 1.3s linear forwards infinite; animation-delay:0.6s"></div>
+        </div>
+    </div>
+    <div class="container-wrapper">
+        <!-- HEADER SECTION -->
+        <header class="upper">
+            <nav class="navbar float-right navbar-light">
+                <button class="navbar-toggler slide-menu" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation" title="menu" id="#about">
+                    <span class="fas fa-bars"></span>
+                </button>
+            </nav>
+            <!-- SLIDER -->
+            <nav class="collapse sidebar" id="navbarMenu" aria-label="page">
+                <ul class="menu justify-content-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link"data-content="Home" title="Go to start page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"data-content="About" title="Go to about me page">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link"data-content="Service" title="View my Services">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#ability" class="nav-link"data-content="Ability" title="View my Ability">Ability</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"data-content="Project" title="view my Project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"data-content="Contact" title="Go to my contact page">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN -->
+        <main>
+            <!-- Banner -->
+            <section class="banner home" id="home">
+                <div class="img-wrapper">
+                    <img src="images/jezz-vega-1387614-unsplash.jpg" alt="">
+                </div>
+                <div class="header d-flex flex-column">
+                    <h1>. Onyekachi Okwuolisa</h1>
+                    <p>Web Designer, Developer, Student</p>
+                    <a href="#about">
+                    <button title="about me">
+                            <i  class="fas fa-angle-double-down"></i>
+                        </button>
+                    </a>
+                </div>
+            </section>
+            <!-- About -->
+            <section class="about text-light px-4" id="about">
+                <div class="section-header scroll-animate">
+                    <h1 class="section-heading d-flex justify-content-center">About</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="row m-0">
+                        <div class="col-md-5 pl-0 my-5 scroll-animate-x">
+                            <div class="about-img-container" data-tilt>
+                                <img class="img-fluid mx-auto" src="images/IMG_6369copy.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-7 scroll-animate-y">
+                            <div class="about-me-wrapper">
+                                <div class="type-wrap">
+                                    <h5 class="type-font">Hi, I'm <span class="color-g" id="typedTwo"></span></h5>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <p> <span class="text-muted"> Fullname: </span> Okwuolisa Onyekachi Emmanuel. <br> I'm a good <span class="color-g">web developer</span>, a <span class="color-g">web designer</span> with great knownledge of front-end techniques, also an <span class="color-g">editor and a student</span>.  <br> </p>
+
+                                        <p>Currently pursuing a Bs.E degree in <span class="color-g"> Chemical Engineering </span> at Michael Okpara University of Agriculture Umudike (MOUAU). I was born and raised in Lagos, Nigeria with the dream for seeing all part of the world and hoping to futher my career in the design space. </p> 
+                                    </div>
+                                </div>
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                      <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    More Info
+                                                </button>
+                                            </h2>
+                                      </div>
+                                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p> <span class="text-muted"> Origin: </span> Nnewi South, Anambra State, Nigeria. <br>My passion for becoming a web developer grew during my first year in the university. The journey started right from there, facing obstacles, losing focus and getting distracted. I never thought i would come this far as a developer with an enginering background. I have always love great designs, which i love to <span class="color-g">create for web </span> and <span class="color-g"> mobile devices</span>. My experiences has taught me a lot to be open and <span class="color-g"> adjustable to change </span> and <span class="color-g"> new perspective</span>.</p>
+                                                
+                                                <p> As the saying goes: <em>"two heads are better than one",</em> I prefare working with a team, you'll learn much more. I love spending time surfing the net, also a lover of football. <br> I'm always down to collaborate and assit when i have the time. Reach out, let's chat. </p>
+                                                <button>Contact</button>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                      <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-content="Education">
+                                                    Education
+                                                </button>
+                                            </h2>
+                                      </div>
+                                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <ul class="education">
+                                                <li>
+                                                   <p><span class="text-muted"> University: </span>Michael Okpara University of Agriculture Umudike, Abia State.<br> (Bs.E) in Chemical Engineering. <br> <em class="date">(August 2020.)</em> </p>
+                                                </li>
+                                                <li>
+                                                  <p><span class="text-muted"> High School: </span>Caritas College, Lagos State. <br> West Africa Senior School Certificate Examination. (WASSCE) <br> <em class="date">(September 2007 - July 2013)</em>
+                                                  </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Service  -->
+            <section class="service text-light px-4" id="service">
+                <div class="section-header scroll-animate">
+                    <h1 class="section-heading d-flex justify-content-center">Services</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center flex-column ">
+                        <div class="service-wrapper">
+                            <div class="service-info scroll-animate-x">
+                                <h2 class="h2">Visual <span class="color-g">Design</span></h2>
+                                <p class="text myfont">Design what you want.</p>
+                                <p class="service-text"> A <span class="color-g">Design</span> has no fixed solution. It's a creative activity. It's one of the most rewarding and satifying activities in the world of technology. An awesome and well structured design get lots of attention and users. A good quality design conveys the content for which it was made. With all these in check, I am committed to help you <span class="color-g"> create a new design</span> or in the <span class="color-g"> modification of an old one.</span></p>
+                            </div>
+                            <div class="service-img-wrapper scroll-animate-xx">
+                                <i class="fa fa-laptop fa-8x"></i>
+                            </div>
+                        </div>
+                        <div class="service-wrapper">
+                            <div class="service-img-wrapper scroll-animate-x">
+                                <i class="fa fa-code fa-8x"></i>
+                            </div>
+                            <div class="service-info scroll-animate-xx">
+                                <h2>Full-Stack <span class="color-g">Developer</span></h2>
+                                <p class="text myfont">Develop your web.</p>
+                                <p class="service-text">I'm a <span class="color-g">Developer</span>, with good knowledge of different <span>programming languages</span> that helps bring life into your designs. I'm passionate to assit you create responsive,<span class="color-g">call-to-action</span> websites that can run across different devices, using latest technologies available.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Abilities -->
+            <section class="ability text-light px-4" id="ability">
+                <div class="section-header scroll-animate">
+                    <h1 class="section-heading d-flex justify-content-center">Abilities</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="ability-wrapper px-4">
+                        <ul class="ability-ul">
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">HTML</li>
+                                </div>
+                
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                            <span class="progress-bar pp bar-html"></span>
+                                            <span class="progress-percent pp">87%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">CSS</li>
+                                </div>
+                
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                            <span class="progress-bar pp bar-css"></span>
+                                            <span class="progress-percent pp">87%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">Js</li>
+                                </div>
+                
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                            <span class="progress-bar pp bar-js"></span>
+                                            <span class="progress-percent pp">69%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">Wp</li>
+                                </div>
+              
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                         <span class="progress-bar pp bar-wordp"></span>
+                                         <span class="progress-percent pp">70%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">Node.js</li>
+                                </div>
+              
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper scroll">
+                                        <li>
+                                         <span class="progress-bar pp bar-node"></span>
+                                         <span class="progress-percent pp">63%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">React.js</li>
+                                </div>
+              
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                            <span class="progress-bar pp bar-react"></span>
+                                            <span class="progress-percent pp">67%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mx-0 my-3">
+                                <div class="col-md-3 pr-0"> 
+                                    <li class="progress-text">BootStrap</li>
+                                </div>
+              
+                                <div class="col-md-9">
+                                    <div class="progress-bar-wrapper">
+                                        <li>
+                                            <span class="progress-bar pp bar-bootst"></span>
+                                            <span class="progress-percent pp">85%</span>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <!-- PROJECT -->
+             <section class="project text-light px-4" id="project">
+                <div class="section-header scroll-animate">
+                    <h1 class="section-heading d-flex justify-content-center">Project</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                        <div class="project-wrapper">
+                            <div class="row">
+                                <div class="col-md-4 scroll-animate-y">
+                                    <div class="project-img" style="background-image: url('images/oux.jpg');">
+                                        <div class="project-cover">
+                                            <div class="project-text">
+                                                <h2 class="project-name">Ouxberge</h2>
+                                                <h4 class="project-tech">Node.js App</h4>
+                                            </div> 
+                                            <a class="project-link" href="https://afternoon-plains-39063.herokuapp.com/" target="_blank">See More</a> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 scroll-animate-y">
+                                    <div class="project-img" style="background-image: url('images/weather.jpg');">
+                                        <div class="project-cover">
+                                            <div class="project-text">
+                                                <h2 class="project-name">Weather Forcast</h2>
+                                                <h4 class="project-tech">html // css // js</h4>
+                                            </div> 
+                                            <a class="project-link" href="https://weather-app-fb0dc.web.app/" target="_blank">See More</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 scroll-animate-y">
+                                    <div class="project-img" style="background-image: url('images/Moonlight.jpg');">
+                                        <div class="project-cover">
+                                            <div class="project-text">
+                                                <h2 class="project-name">Moonlight</h2>
+                                                <h4 class="project-tech">html // css // Js</h4>
+                                            </div> 
+                                            <a class="project-link" href="https://moonlighter.netlify.app/" target="_blank">See More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- CONTACT -->
+            <section class="contact text-light px-4" id="contact">
+                <div class="section-header scroll-animate">
+                    <h1 class="section-heading d-flex justify-content-center">Contact</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-center">
+                        <div class="contact-wrapper">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-container">
+                                        <h4 class="sent-notification"></h4>
+                                        <form class="contact-form" id="myForm" method="POST" data-netlify="true">
+                                            <input class="contact-input" type="text" name="name" id="name" placeholder="Name" maxlength="30" >
+                                            <input class="contact-input" type="email" id="email" name="email" placeholder="Email">
+                                            <input class="contact-input" type="text" id="subject" name="subject" placeholder="Subject" >
+                                            <textarea id="message" cols="1" rows="3" name="message" placeholder="What can i do for you?"></textarea>
+                                            <input class="contact-form-btn" type="submit" value="Send">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="contact-container">
+                                        <h2> <span class="color-g">Get</span> in touch</h2>
+                                        <p class="text-white"> If you have any questions, and to know how i built this from scratch without any template please feel free to drop me a message. I will surly respond. I keep improving for best solotions, and posible ways to stay informed on the lastest technologies, social medias helps to keep us updated and connected. feel free to reach out to me..</p>
+                                        <div class="contact-info">
+                                            <ul class="details">
+                                                <li class="text-muted"><i class="fas fa-map-marker-alt color-g pr-3"></i> 26 Olushesi str, opp Ojo Barracks, Lagos. Nigeria</li>
+                                                <li class="text-muted"><i class="fas fa-phone-alt color-g pr-3"></i> (081) 872-667-21</li>
+                                                <li class="text-muted"><i class="fas fa-envelope color-g pr-3"></i> onyekachiokwuolisa@gmail.com</li>
+                                            </ul>
+                                            <div class="social-media">
+                                                <a href="https://github.com/on2onyekachi" target="_blank" class="social-media-link" title="View me on Github">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                
+                                                <a href="https://web.facebook.com/onyekachi.okwuolisa.7" target="_blank" class="social-media-link" title="Add me on Facebook">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                
+                                                <a href="https://www.instagram.com/alagee_kachi/?hl=en" target="_blank" class="social-media-link" title="Follow me on Instagram">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+
+                                                <a href="https://twitter.com/kachi_okwuolisa" target="_blank" class="social-media-link" title="Follow me on Twiter">
+                                                    <i class="fab fa-twitter"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <section class="footer bg-black">
+            <div class="d-flex justify-content-center container-fluid">
+                <p class="copyright text-muted px-4">copyright &copy; Onyekachi Okwuolisa. all rights reserved.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+    <script src="stylesheet/js/lib/tilt.js"></script>
+    <script src="stylesheet/js/lib/typed.min.js"></script>
+    <script type="text/javascript" src="stylesheet/js/main.js"></script>
+
+</body>
+</html>
