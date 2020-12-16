@@ -224,7 +224,7 @@ html{
 }
 .img-wrapper{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
 }
@@ -327,6 +327,21 @@ html{
     animation-delay: 0.9s;
     animation-fill-mode: forwards;
     transition: border 0.3s;
+}
+
+.resume{
+    width: 150px;
+    margin-top: 1rem;
+    color: #967627;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 
 .fa-angle-double-down{
@@ -1033,7 +1048,9 @@ html{
       opacity: 1;
       transform: translate(0px);
   }
-
+  a:hover{
+      color: #967627;
+  }
 /* Reponsive */
 @media (max-width: 991px){
     .header{
@@ -1172,6 +1189,12 @@ html{
     }
     .service-img-wrapper .fa{
         font-size: 5rem;
+    }
+    .contact{
+        padding-bottom: 0;
+    }
+    .resume{
+        width: 8.1rem;
     }
 }
 @media (max-width: 580px){

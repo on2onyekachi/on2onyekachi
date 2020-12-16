@@ -30,11 +30,12 @@ const typedTwo = new Typed('#typedTwo', {
 });
 // loader
 // SPINNER CODE.
+const loader = document.querySelector('.loader-container');
 window.onload = () => {
-    setTimeout(() => {
-        document.querySelector("body").classList.add("display");
+        const body = document.querySelector("body");
+        body.classList.add("display");
+        body.removeChild(loader);
         mainFunc();
-    }, 2000);
 }
 // slider on click button
 slider.addEventListener("click", function(){
