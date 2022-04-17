@@ -31,12 +31,13 @@ const typedTwo = new Typed('#typedTwo', {
 // loader
 // SPINNER CODE.
 const loader = document.querySelector('.loader-container');
-window.onload = () => {
+window.onload = setTimeout(() => {
         const body = document.querySelector("body");
         body.classList.add("display");
         body.removeChild(loader);
         mainFunc();
-}
+}, 3000)
+
 // slider on click button
 slider.addEventListener("click", function(){
     document.querySelector('.container-wrapper').classList.toggle('change');
