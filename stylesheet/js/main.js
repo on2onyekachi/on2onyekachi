@@ -11,35 +11,18 @@ const scrollShow = document.querySelectorAll(".scroll-animate, .scroll-animate-x
 const screenPosition = window.innerHeight / 1;
 const screenBar = window.innerHeight / 1;
 // animation start.
-const progressBar    = document.querySelectorAll('.progress-bar');
-// Typed.js
-const typedTwo = new Typed('#typedTwo', {
-    strings: [
-        'Onyekachi',
-        '<span style="color: #f8f9fa;">a</span> Web Designer',
-        '<span style="color: #f8f9fa;">a</span> Web Developer',
-        '<span style="color: #f8f9fa;">a</span> Freelancer',
-        'Onyekachi'
-    ],
-    typeSpeed: 60,
-    backSpeed: 50,
-    smartBackspace: true,
-    backDelay: 6000,
-    cursorChar: '<i class="fas fa-pen fa-1x"></i>',
-    loop: true
-});
+const progressBar = document.querySelectorAll('.progress-bar');
 // loader
 // SPINNER CODE.
 const loader = document.querySelector('.loader-container');
 window.onload = setTimeout(() => {
-        const body = document.querySelector("body");
-        body.classList.add("display");
-        body.removeChild(loader);
-        mainFunc();
-}, 3000)
-
+    const body = document.querySelector("body");
+    body.classList.add("display");
+    body.removeChild(loader);
+    // mainFunc();
+}, 1000)
 // slider on click button
-slider.addEventListener("click", function(){
+slider.addEventListener("click", function () {
     document.querySelector('.container-wrapper').classList.toggle('change');
 });
 // window scroll
@@ -63,11 +46,11 @@ function mainFunc() {
     // for navbar current view page highlight.
     function navbarScroll() {
         sections.forEach(function (section, i) {
-            if (window.pageYOffset >= section.offsetTop - 20) {
+            if (window.pageYOffset >= section.offsetTop - 30) {
                 navLinks.forEach(function (navLink) {
                     navLink.classList.remove("navbarChange");
                 });
-                if(navLinks[i]){
+                if (navLinks[i]) {
                     navLinks[i].classList.add("navbarChange");
                 }
             }
@@ -79,7 +62,6 @@ function mainFunc() {
         if (window.pageYOffset + window.innerHeight >= progress.offsetTop) {
             progressBar.forEach(function (element, i) {
                 element.style.width = `${progressPercent[i]}%`;
-                element.nextElementSibling.textContent = progressPercent[i] + "%";
                 let scrollBar = element.getBoundingClientRect().top;
                 if (scrollBar < screenBar) {
                     element.classList.add("progress-bar-play");
@@ -91,8 +73,8 @@ function mainFunc() {
     barPercent();
 }
 // smooth scroll to page on link click. 
-navLinks.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
         const id = e.currentTarget.getAttribute('href').slice(1);
         const element = document.getElementById(id);
@@ -104,22 +86,12 @@ navLinks.forEach(function(link) {
     });
 });
 
-function isNotEmpty(caller){
-    if(caller.val() == ""){
-        caller.css('border-bottom', '1px solid red');
-        return false;
-    }
-    else{
-        caller.css('bored-border', '');
-        return true;
-    }
-}
 
 const root = document.querySelector('#navbarMenu');
 // const dropdown = root.querySelector('')
 document.addEventListener('click', (event) => {
     if (!root.contains(event.target)) {
-        if(root.classList.contains('show')){
+        if (root.classList.contains('show')) {
             console.log('close o');
             root.classList.remove('show');
             document.querySelector('.container-wrapper').classList.remove('change');
