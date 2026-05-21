@@ -1,8 +1,5 @@
 // slide on click button
 const slider = document.querySelector('.slide-menu');
-//bar percent - abilitity
-const progress = document.querySelector('.ability-ul');
-const progressPercent = [87, 87, 69, 70, 63, 67, 85];
 // FOR NAVBAR 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -10,8 +7,6 @@ const navLinks = document.querySelectorAll(".nav-link");
 const scrollShow = document.querySelectorAll(".scroll-animate, .scroll-animate-x, .scroll-animate-xx, .scroll-animate-y");
 const screenPosition = window.innerHeight / 1;
 const screenBar = window.innerHeight / 1;
-// animation start.
-const progressBar = document.querySelectorAll('.progress-bar');
 // loader
 // SPINNER CODE.
 const loader = document.querySelector('.loader-container');
@@ -46,7 +41,7 @@ function mainFunc() {
     // for navbar current view page highlight.
     function navbarScroll() {
         sections.forEach(function (section, i) {
-            if (window.pageYOffset >= section.offsetTop - 30) {
+            if (window.pageYOffset >= section.offsetTop - 400) {
                 navLinks.forEach(function (navLink) {
                     navLink.classList.remove("navbarChange");
                 });
@@ -57,20 +52,6 @@ function mainFunc() {
         });
     }
     navbarScroll();
-    // bar percent-ability
-    function barPercent() {
-        if (window.pageYOffset + window.innerHeight >= progress.offsetTop) {
-            progressBar.forEach(function (element, i) {
-                element.style.width = `${progressPercent[i]}%`;
-                let scrollBar = element.getBoundingClientRect().top;
-                if (scrollBar < screenBar) {
-                    element.classList.add("progress-bar-play");
-                    element.nextElementSibling.classList.add("progress-bar-play");
-                }
-            });
-        }
-    }
-    barPercent();
 }
 // smooth scroll to page on link click. 
 navLinks.forEach(function (link) {
@@ -85,8 +66,6 @@ navLinks.forEach(function (link) {
         });
     });
 });
-
-
 const root = document.querySelector('#navbarMenu');
 // const dropdown = root.querySelector('')
 document.addEventListener('click', (event) => {
