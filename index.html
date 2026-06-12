@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="stylesheet/css/fa/all.css">
     <script src="stylesheet/js/lib/jquery.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="stylesheet/js/lib/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheet/css/main.css">
 </head>
@@ -28,34 +32,28 @@
     </div>
     <div class="container-wrapper">
         <!-- HEADER SECTION -->
-        <header class="upper">
-            <nav class="navbar float-right navbar-light">
-                <button class="navbar-toggler slide-menu" type="button" data-toggle="collapse" data-target="#navbarMenu"
-                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation" id="#about">
-                    <span class="fas fa-bars" title="menu"></span>
-                    <span class="fas fa-times" title="close"></span>
+        <header>
+            <nav class="navbar" aria-label="Main navigation">
+                <button class="navbar-toggler slide-menu" type="button" aria-controls="navbarMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="hamburger-icon">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </span>
                 </button>
             </nav>
-            <!-- SLIDER -->
-            <nav class="collapse sidebar" id="navbarMenu" aria-label="page">
-                <ul class="menu justify-content-center">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link" data-content="Home" title="Go to start page">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link" data-content="About" title="Go to about me page">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#tech-stack" class="nav-link" data-content="Tech-stack" title="View my Tech-stack">Tech-stack</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#project" class="nav-link" data-content="Project" title="view my Project">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link" data-content="Contact"
-                            title="Go to my contact page">Contact</a>
-                    </li>
-                </ul>
+        
+            <nav class="sidebar" id="navbarMenu" aria-label="Page sections">
+                <div class="sidebar-inner">
+                    <ul class="menu">
+                        <li class="nav-item"><a href="#home" class="nav-link" data-content="Home">Home</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link" data-content="About">About</a></li>
+                        <li class="nav-item"><a href="#tech-stack" class="nav-link" data-content="Stack">Stack</a></li>
+                        <li class="nav-item"><a href="#project" class="nav-link" data-content="Work">Work</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" data-content="Contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <!-- MAIN -->
@@ -185,131 +183,119 @@
                     <div class="underline"></div>
                 </div>
                 <div class="container-fluid">
-                    <div class="d-flex justify-content-center">
-                        <div class="project-wrapper">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12 scroll-animate-x">
-                                    <div class="project-wrapper-text text-trim to-rt">
-                                        <h3 class="project-wrapper-text-title text-head color-g">Moonlight (Beta)</h3>
-                                        <div>
-                                            <p class="mb-4 text-muted">
-                                                A secure, full-stack application engineered to allow students to anonymously report
-                                                incidents of misconduct directly to designated institutional authorities. Built with
-                                                an emphasis on data privacy, secure routing, and fluid interface responses to handle
-                                                sensitive reporting protocols reliably.
-                                            </p>
-                                            <div class="project-tech-tags mb-3">
-                                                <span class="badge badge-dark">React</span>
-                                                <span class="badge badge-dark">Node.js</span>
-                                                <span class="badge badge-dark">JavaScript</span>
-                                                <span class="badge badge-dark">MongoDB</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-group-info">
-                                            <a rel="noreferrer" target="_blank" class="link-btn-style"
-                                                href="https://moonlighter.netlify.app">
-                                                See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </a>
-                                            <a rel="noreferrer" target="_blank" class="source-code"
-                                                href="https://github.com/on2onyekachi">
-                                                <i class="fab fa-github fa-2x"></i>Source code
-                                            </a>
+                    <!-- Horizontal scroll -->
+                    <div class="horizontal-wrapper">
+                        <div class="horizontal-content">
+                            <div class="project-slide">
+                                <div class="project-meta-side">
+                                    <div class="project-num">1</div>
+                                    <div class="project-details">
+                                        <h3 class="project-title">Moonlight <span class="badge-label">Beta</span></h3>
+                                        <p class="project-desc">
+                                            A secure, full-stack application engineered to allow students to anonymously report incidents of
+                                            misconduct to institutional authorities. Built with emphasis on data privacy, secure routing, and
+                                            fluid interface responses.
+                                        </p>
+                                        <div class="project-tech-tags">
+                                            <span class="badge-dark">React</span>
+                                            <span class="badge-dark">Node.js</span>
+                                            <span class="badge-dark">JavaScript</span>
+                                            <span class="badge-dark">MongoDB</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 scroll-animate-xx">
-                                    <div class="project-wrapper-image load-hidden">
-                                        <a rel="noreferrer" href="https://moonlighter.netlify.app" target="_blank">
-                                            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                                                class="thumbnail rounded js-tilt">
-                                                <img alt="Moonlight Project Screenshot" class="img-fluid" src="images/m1.jpg">
-                                            </div>
+                        
+                                <div class="project-image-side">
+                                    <div class="project-links-overlay">
+                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noreferrer" class="overlay-btn">
+                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
+                                        <a href="https://github.com/on2onyekachi" target="_blank" rel="noreferrer" class="overlay-btn">
+                                            <i class="fab fa-github" aria-hidden="true"></i> Source Code
+                                        </a>
+                                    </div>
+                                    <div class="image-container-wrapper">
+                                        <img src="images/m1.jpg" alt="Moonlight Project Screenshot" class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12 scroll-animate-xx">
-                                    <div class="project-wrapper-image to-rt load-hidden">
-                                        <a rel="noreferrer" href="https://myweatherpwapp.netlify.app/" target="_blank">
-                                            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                                                class="thumbnail rounded js-tilt">
-                                                <img alt="Weather PWA Project Screenshot" class="img-fluid" src="images/w1.png">
-                                            </div>
-                                        </a>
+                        
+                            <div class="project-slide">
+                                <div class="project-meta-side">
+                                    <div class="project-num">2</div>
+                                    <div class="project-details">
+                                        <h3 class="project-title">Weather PWA</h3>
+                                        <p class="project-desc">
+                                            A performance-optimized Progressive Web Application delivering real-time atmospheric updates.
+                                            Features asynchronous global location queries and service worker implementation for offline access
+                                            to cached histories.
+                                        </p>
+                                        <div class="project-tech-tags">
+                                            <span class="badge-dark">HTML</span>
+                                            <span class="badge-dark">CSS</span>
+                                            <span class="badge-dark">JavaScript</span>
+                                            <span class="badge-dark">Service Workers</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 scroll-animate-x">
-                                    <div class="project-wrapper-text text-trim">
-                                        <h3 class="project-wrapper-text-title text-head color-g">Weather PWA</h3>
-                                        <div>
-                                            <p class="mb-4 text-muted">
-                                                A performance-optimized Progressive Web Application delivering real-time atmospheric
-                                                updates using the OpenWeatherMap API. Features asynchronous global location queries
-                                                and automated service worker implementation to allow responsive offline access to
-                                                cached histories.
-                                            </p>
-                                            <div class="project-tech-tags mb-3">
-                                                <span class="badge badge-dark">HTML</span>
-                                                <span class="badge badge-dark">CSS</span>
-                                                <span class="badge badge-dark">JavaScript</span>
-                                                <span class="badge badge-dark">Service Workers</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-group-info">
-                                            <a rel="noreferrer" target="_blank" class="link-btn-style"
-                                                href="https://myweatherpwapp.netlify.app/">
-                                                See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </a>
-                                            <a rel="noreferrer" target="_blank" class="source-code"
-                                                href="https://github.com/on2onyekachi/Weather-PWA">
-                                                <i class="fab fa-github fa-2x"></i>Source code
-                                            </a>
-                                        </div>
+                        
+                                <div class="project-image-side">
+                                    <div class="project-links-overlay">
+                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noreferrer" class="overlay-btn">
+                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                        <a href="https://github.com/on2onyekachi/Weather-PWA" target="_blank" rel="noreferrer"
+                                            class="overlay-btn">
+                                            <i class="fab fa-github" aria-hidden="true"></i> Source Code
+                                        </a>
+                                    </div>
+                                    <div class="image-container-wrapper">
+                                        <img src="images/w1.png" alt="Weather PWA Screenshot" class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12 scroll-animate-x">
-                                    <div class="project-wrapper-text text-trim to-rt">
-                                        <h3 class="project-wrapper-text-title color-g text-head">Pacetone</h3>
-                                        <div>
-                                            <p class="mb-4 text-muted">
-                                            A communication analytics application designed to evaluate tone, clarity, and structural balance in text. Integrated
-                                            with the Gemini API for deep linguistic critique, it processes raw inputs asynchronously and delivers precise,
-                                            actionable stylistic feedback via an intuitive, real-time interface.
-                                            </p>
-                                            <div class="project-tech-tags mb-3">
-                                                <span class="badge badge-dark">Next.js</span>
-                                                <span class="badge badge-dark">TypeScript</span>
-                                                <span class="badge badge-dark">Tailwind CSS</span>
-                                                <span class="badge badge-dark">Gemini API</span>
-                                            </div>
-                                        </div>
-                                        <div class="btn-group-info">
-                                            <a rel="noreferrer" target="_blank" class="link-btn-style"
-                                                href="https://pacetone.vercel.app/">
-                                                See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                            </a>
-                                            <span class="source-code text-muted" style="cursor: not-allowed; opacity: 0.6;">
-                                                <i class="fas fa-lock fa-lg pr-1"></i> Codebase Private
-                                            </span>
+                        
+                            <div class="project-slide">
+                                <div class="project-meta-side">
+                                    <div class="project-num">3</div>
+                                    <div class="project-details">
+                                        <h3 class="project-title">Pacetone</h3>
+                                        <p class="project-desc">
+                                            A communication analytics application that evaluates tone, clarity, and structural balance in text.
+                                            Integrated with the Gemini API for deep linguistic critique, delivering actionable stylistic
+                                            feedback via a real-time interface.
+                                        </p>
+                                        <div class="project-tech-tags">
+                                            <span class="badge-dark">Next.js</span>
+                                            <span class="badge-dark">TypeScript</span>
+                                            <span class="badge-dark">Tailwind CSS</span>
+                                            <span class="badge-dark">Gemini API</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 scroll-animate-xx">
-                                    <div class="project-wrapper-image load-hidden">
-                                        <a rel="noreferrer" href="https://pacetone.vercel.app/" target="_blank">
-                                            <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
-                                                class="thumbnail rounded js-tilt">
-                                                <img alt="Pacetone Project Image" class="img-fluid" src="images/p1.png">
-                                            </div>
+                        
+                                <div class="project-image-side">
+                                    <div class="project-links-overlay">
+                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noreferrer" class="overlay-btn">
+                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
+                                        <span class="overlay-btn opacity-disabled">
+                                            <i class="fas fa-lock" aria-hidden="true"></i> Codebase Private
+                                        </span>
+                                    </div>
+                                    <div class="image-container-wrapper">
+                                        <img src="images/p1.png" alt="Pacetone Project Screenshot" class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
-                            <a href="https://github.com/on2onyekachi" class="link-btn-style" target="_blank" rel="noreferrer">More
-                                on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div><!-- /.horizontal-wrapper -->
+                    
+                    <div class="section-inner">
+                        <div class="project-github-cta">
+                            <a href="https://github.com/on2onyekachi" class="link-btn-style" target="_blank" rel="noopener noreferrer">
+                                More on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
