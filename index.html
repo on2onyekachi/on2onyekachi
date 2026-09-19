@@ -5,9 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Onyekachi | Web Developer</title>
-    <meta name="description" content="a web designer and developer">
-    <link rel="stylesheet" href="stylesheet/css/lib/bootstrap.min.css">
+
+    <!-- ── PRIMARY META ─────────────────────────────────── -->
+    <title>Onyekachi Okwuolisa — Software Engineer</title>
+    <meta name="description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Onyekachi Okwuolisa">
+
+    <!-- ── OPEN GRAPH (LinkedIn / Facebook previews) ────── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Onyekachi Okwuolisa — Software Engineer">
+    <meta property="og:description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
+    <meta property="og:image" content="/images/kachi_image-21.png">
+    <meta property="og:url" content="https://on2onyekachi.netlify.app">
+    <meta property="og:site_name" content="Onyekachi Okwuolisa Portfolio">
+
+    <!-- ── TWITTER CARD ──────────────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Onyekachi Okwuolisa — Software Engineer">
+    <meta name="twitter:description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
+    <meta name="twitter:image" content="/images/kachi_image-21.png">
+    <meta name="twitter:site" content="@kachi_okwuolisa">
+
+    <!-- ── FAVICONS ──────────────────────────────────────── -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -15,14 +35,20 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto+Condensed&family=Ubuntu&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <!-- ── FONTS: preconnect hints then single combined request ── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Roboto+Condensed&display=swap">
+
+    <!-- ── ICONS: local copy only (CDN duplicate removed) ── -->
     <link rel="stylesheet" href="stylesheet/css/fa/all.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="stylesheet/js/lib/bootstrap.min.js"></script>
+    <!-- ── GSAP: defer so scripts are non-render-blocking ── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- ── MAIN STYLESHEET ───────────────────────────────── -->
     <link rel="stylesheet" href="stylesheet/css/main.css">
 </head>
 
@@ -85,7 +111,7 @@
             </section>
             <section class="about text-light px-4" id="about">
                 <div class="section-header scroll-animate">
-                    <h1 class="section-heading d-flex justify-content-center">About</h1>
+                    <h2 class="section-heading d-flex justify-content-center">About</h2>
                     <div class="underline"></div>
                 </div>
                 <div class="d-flex flex-row justify-content-center">
@@ -94,7 +120,7 @@
                             <div class="about-img-container" data-tilt data-tilt-max="4" data-tilt-glare="false"
                                 data-tilt-max-glare="0">
                                 <img class="img-fluid mx-auto" src="images/kachi_image-21.png"
-                                    alt="Onyekachi Okwuolisa Image">
+                                    alt="Onyekachi Okwuolisa — Software Engineer" loading="lazy">
                             </div>
                         </div>
                         <div class="col-md-7 about-text-col">
@@ -135,7 +161,7 @@
             </section>
             <section class="tech-stack text-light px-4" id="tech-stack">
                 <div class="section-header scroll-animate">
-                    <h1 class="section-heading d-flex justify-content-center">Tech Stack</h1>
+                    <h2 class="section-heading d-flex justify-content-center">Tech Stack</h2>
                     <div class="underline"></div>
                 </div>
                 <div class="container-fluid">
@@ -199,7 +225,7 @@
             </section>
             <section class="project text-light" id="project">
                 <div class="section-header scroll-animate">
-                    <h1 class="section-heading d-flex justify-content-center">Projects</h1>
+                    <h2 class="section-heading d-flex justify-content-center">Projects</h2>
                     <div class="underline"></div>
                 </div>
                 <div class="container-fluid">
@@ -267,11 +293,11 @@
 
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noreferrer"
+                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noopener noreferrer"
                                             class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
-                                        <a href="https://github.com/on2onyekachi" target="_blank" rel="noreferrer"
+                                        <a href="https://github.com/on2onyekachi/moonlight" target="_blank" rel="noopener noreferrer"
                                             class="overlay-btn">
                                             <i class="fab fa-github" aria-hidden="true"></i> Source Code
                                         </a>
@@ -306,12 +332,12 @@
 
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noreferrer"
+                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noopener noreferrer"
                                             class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
                                         <a href="https://github.com/on2onyekachi/Weather-PWA" target="_blank"
-                                            rel="noreferrer" class="overlay-btn">
+                                            rel="noopener noreferrer" class="overlay-btn">
                                             <i class="fab fa-github" aria-hidden="true"></i> Source Code
                                         </a>
                                     </div>
@@ -345,7 +371,7 @@
 
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noreferrer"
+                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noopener noreferrer"
                                             class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
@@ -373,7 +399,7 @@
             </section>
             <section class="contact text-light" id="contact">
                 <div class="section-header scroll-animate">
-                    <h1 class="section-heading d-flex justify-content-center">Contact</h1>
+                    <h2 class="section-heading d-flex justify-content-center">Contact</h2>
                     <div class="underline"></div>
                 </div>
             
@@ -386,17 +412,31 @@
                                     <h4 class="sent-notification"></h4>
                                     <form class="contact-form" id="myForm" method="POST" data-netlify="true"
                                         netlify-honeypot="bot-field">
-                                        <p class="d-none">
-                                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                                        <p style="display:none" aria-hidden="true">
+                                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                                         </p>
-                                        <input class="contact-input" type="text" name="name" id="name" placeholder="Name"
-                                            maxlength="40" required>
-                                        <input class="contact-input" type="email" id="email" name="email" placeholder="Email"
-                                            maxlength="40" required>
-                                        <input class="contact-input" type="text" id="subject" name="subject" placeholder="Subject"
-                                            maxlength="40" required>
-                                        <textarea id="message" cols="1" rows="3" name="message" placeholder="What can i do for you?"
-                                            maxlength="120" required></textarea>
+                                        <div class="form-field">
+                                            <label class="form-label" for="name">Name</label>
+                                            <input class="contact-input" type="text" name="name" id="name"
+                                                placeholder="Your full name" maxlength="80" required
+                                                autocomplete="name">
+                                        </div>
+                                        <div class="form-field">
+                                            <label class="form-label" for="email">Email</label>
+                                            <input class="contact-input" type="email" id="email" name="email"
+                                                placeholder="your@email.com" maxlength="80" required
+                                                autocomplete="email">
+                                        </div>
+                                        <div class="form-field">
+                                            <label class="form-label" for="subject">Subject</label>
+                                            <input class="contact-input" type="text" id="subject" name="subject"
+                                                placeholder="What's this about?" maxlength="100" required>
+                                        </div>
+                                        <div class="form-field">
+                                            <label class="form-label" for="message">Message</label>
+                                            <textarea id="message" cols="1" rows="5" name="message"
+                                                placeholder="What can I do for you?" maxlength="500" required></textarea>
+                                        </div>
                                         <input class="contact-form-btn" type="submit" value="Send Message">
                                     </form>
                                 </div>
@@ -418,19 +458,22 @@
                                             </li>
                                         </ul>
                                         <div class="social-media">
-                                            <a href="https://github.com/on2onyekachi" target="_blank" class="social-media-link"
-                                                title="View me on Github">
-                                                <i class="fab fa-github"></i>
+                                            <a href="https://github.com/on2onyekachi" target="_blank"
+                                                rel="noopener noreferrer" class="social-media-link"
+                                                aria-label="View my GitHub profile">
+                                                <i class="fab fa-github" aria-hidden="true"></i>
                                             </a>
-            
+
                                             <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank"
-                                                class="social-media-link" title="Follow me on Linkedin">
-                                                <i class="fab fa-linkedin-in"></i>
+                                                rel="noopener noreferrer" class="social-media-link"
+                                                aria-label="Connect on LinkedIn">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                                             </a>
-            
-                                            <a href="https://twitter.com/kachi_okwuolisa" target="_blank" class="social-media-link"
-                                                title="Follow me on X">
-                                                <i class="fab fa-twitter"></i>
+
+                                            <a href="https://twitter.com/kachi_okwuolisa" target="_blank"
+                                                rel="noopener noreferrer" class="social-media-link"
+                                                aria-label="Follow on X (Twitter)">
+                                                <i class="fab fa-twitter" aria-hidden="true"></i>
                                             </a>
                                         </div>
                                     </div>

@@ -44,13 +44,19 @@ navLinks.forEach(function (link) {
     });
 });
 
-// Active nav highlight on scroll
+// Active nav highlight on scroll — throttled with rAF to avoid layout thrashing
+let rafScheduled = false;
 window.addEventListener('scroll', function () {
-    pageSections.forEach(function (section, i) {
-        if (window.pageYOffset >= section.offsetTop - 400) {
-            navLinks.forEach(nl => nl.classList.remove('navbarChange'));
-            if (navLinks[i]) navLinks[i].classList.add('navbarChange');
-        }
+    if (rafScheduled) return;
+    rafScheduled = true;
+    window.requestAnimationFrame(function () {
+        pageSections.forEach(function (section, i) {
+            if (window.scrollY >= section.offsetTop - 400) {
+                navLinks.forEach(nl => nl.classList.remove('navbarChange'));
+                if (navLinks[i]) navLinks[i].classList.add('navbarChange');
+            }
+        });
+        rafScheduled = false;
     });
 });
 
@@ -64,6 +70,7 @@ window.onload = function () {
         initGSAP();
     }, 1000);
 };
+
 // ── GSAP ─────────────────────────────────────────────────
 function initGSAP() {
     // 1. CRITICAL FALLBACK MODULE (Runs if GSAP fails to load)
@@ -174,63 +181,97 @@ function initGSAP() {
         }
     });
 
-    // ── 5. HORIZONTAL SCROLL PROJECTS ────────────────────
+    // ── 5. HORIZONTAL SCROLL PROJECTS (desktop only) ──────────────
+    // Guard: the GSAP pin / scrub is ONLY applied on viewports ≥ 961px.
+    // Below that breakpoint the CSS already stacks slides vertically, so
+    // initialising the pin would freeze the page with no horizontal movement.
     const track = document.querySelector('.horizontal-content');
 
     if (track) {
-        gsap.set('.project-num', { opacity: 0, x: -35 });
-        gsap.set('.project-details', { opacity: 0, y: 30 });
+        ScrollTrigger.matchMedia({
+            // ── DESKTOP: enable horizontal scroll hijack ────────────
+            '(min-width: 961px)': function () {
+                gsap.set('.project-num', { opacity: 0, x: -35 });
+                gsap.set('.project-details', { opacity: 0, y: 30 });
 
-        const scrollTween = gsap.to(track, {
-            x: () => -(track.scrollWidth - window.innerWidth),
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '.horizontal-wrapper',
-                pin: true,
-                scrub: 1,
-                start: 'top top',
-                end: () => '+=' + (track.scrollWidth - window.innerWidth),
-                invalidateOnRefresh: true,
+                const scrollTween = gsap.to(track, {
+                    x: () => -(track.scrollWidth - window.innerWidth),
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '.horizontal-wrapper',
+                        pin: true,
+                        scrub: 1,
+                        start: 'top top',
+                        end: () => '+=' + (track.scrollWidth - window.innerWidth),
+                        invalidateOnRefresh: true,
+                    }
+                });
+
+                gsap.utils.toArray('.project-slide').forEach(slide => {
+                    const numEl = slide.querySelector('.project-num');
+                    const detailsEl = slide.querySelector('.project-details');
+                    const maskEl = slide.querySelector('.image-container-wrapper');
+
+                    if (numEl) {
+                        gsap.to(numEl, {
+                            opacity: 0.95, x: 0,
+                            duration: 0.7, ease: 'power3.out',
+                            scrollTrigger: {
+                                trigger: numEl,
+                                containerAnimation: scrollTween,
+                                start: 'left 90%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+
+                    if (detailsEl) {
+                        gsap.to(detailsEl, {
+                            opacity: 1, y: 0,
+                            duration: 0.75, delay: 0.1, ease: 'power3.out',
+                            scrollTrigger: {
+                                trigger: detailsEl,
+                                containerAnimation: scrollTween,
+                                start: 'left 95%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+
+                    if (maskEl) {
+                        gsap.to(maskEl, {
+                            clipPath: 'circle(100% at 50% 50%)',
+                            duration: 0.95, ease: 'power2.inOut',
+                            scrollTrigger: {
+                                trigger: maskEl,
+                                containerAnimation: scrollTween,
+                                start: 'left 85%',
+                                toggleActions: 'play none none reverse'
+                            }
+                        });
+                    }
+                });
+            },
+
+            // ── MOBILE: no pin, just reveal images on scroll ─────────
+            '(max-width: 960px)': function () {
+                // Ensure all elements that GSAP set to opacity:0 are visible
+                gsap.set('.project-num', { opacity: 0.95, x: 0 });
+                gsap.set('.project-details', { opacity: 1, y: 0 });
+
+                // Simple scroll-reveal for images without pin or scrub
+                gsap.utils.toArray('.image-container-wrapper').forEach(maskEl => {
+                    gsap.to(maskEl, {
+                        clipPath: 'circle(100% at 50% 50%)',
+                        duration: 0.95, ease: 'power2.inOut',
+                        scrollTrigger: {
+                            trigger: maskEl,
+                            start: 'top 85%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    });
+                });
             }
-        });
-
-        gsap.utils.toArray('.project-slide').forEach(slide => {
-            const numEl = slide.querySelector('.project-num');
-            const detailsEl = slide.querySelector('.project-details');
-            const maskEl = slide.querySelector('.image-container-wrapper');
-
-            gsap.to(numEl, {
-                opacity: 0.95, x: 0,
-                duration: 0.7, ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: numEl,
-                    containerAnimation: scrollTween,
-                    start: 'left 90%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-
-            gsap.to(detailsEl, {
-                opacity: 1, y: 0,
-                duration: 0.75, delay: 0.1, ease: 'power3.out',
-                scrollTrigger: {
-                    trigger: detailsEl,
-                    containerAnimation: scrollTween,
-                    start: 'left 95%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-
-            gsap.to(maskEl, {
-                clipPath: 'circle(100% at 50% 50%)',
-                duration: 0.95, ease: 'power2.inOut',
-                scrollTrigger: {
-                    trigger: maskEl,
-                    containerAnimation: scrollTween,
-                    start: 'left 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
         });
     }
 

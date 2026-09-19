@@ -2,10 +2,26 @@
 * {
     margin: 0;
     padding: 0;
-    outline: none;
+    /* outline:none removed — keyboard focus must be visible (WCAG 2.1 AA) */
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+}
+
+/* ── FOCUS VISIBILITY (keyboard navigation) ─────────────── */
+/* Targets only keyboard interactions, not mouse clicks      */
+:focus-visible {
+    outline: 2px solid var(--gold-mid);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* Suppress the focus ring for mouse/touch users on buttons  */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /* ── CUSTOM FONTS ──────────────────────────────────────── */
@@ -198,6 +214,54 @@
     }
 }
 
+/* ── BOOTSTRAP UTILITY SHIM ────────────────────────────────
+   Minimal replacements for Bootstrap utilities still used in
+   the HTML markup. Keeps layout intact without loading Bootstrap.
+─────────────────────────────────────────────────────────── */
+.d-flex            { display: flex !important; }
+.flex-column       { flex-direction: column !important; }
+.flex-row          { flex-direction: row !important; }
+.justify-content-center { justify-content: center !important; }
+.align-items-center     { align-items: center !important; }
+.d-none            { display: none !important; }
+.img-fluid         { max-width: 100%; height: auto; }
+.mx-auto           { margin-left: auto !important; margin-right: auto !important; }
+.my-5              { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+.pl-0              { padding-left: 0 !important; }
+.px-4              { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+.text-light        { color: var(--text-primary) !important; }
+.text-muted        { color: var(--text-secondary) !important; }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+.m-0 { margin: 0 !important; }
+
+[class*="col-"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+}
+
+.col-md-5 { width: 100%; }
+.col-md-6 { width: 100%; }
+.col-md-7 { width: 100%; }
+
+@media (min-width: 768px) {
+    .col-md-5 { width: 41.6667%; }
+    .col-md-6 { width: 50%; }
+    .col-md-7 { width: 58.3333%; }
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 /* ── GLOBAL UTILITIES ──────────────────────────────────── */
 .color-g {
     color: var(--gold-mid);
@@ -312,6 +376,19 @@ body:not(.gsap-loaded) .project-slide:hover .project-display-img {
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* ── REDUCED MOTION (accessibility) ────────────────────── */
+/* Respects the user's OS "reduce motion" preference        */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* ── BASE ──────────────────────────────────────────────── */
 html {
     font-size: 15px;
@@ -342,6 +419,9 @@ body {
     right: 20px;
     z-index: 600;
     padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .navbar-toggler {
@@ -1345,6 +1425,29 @@ body {
     gap: 0;
 }
 
+/* Form field wrapper — label sits above input (WCAG Rule 6) */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.2rem;
+}
+
+.form-label {
+    font-family: var(--font-ui), sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    transition: color 0.25s;
+}
+
+/* Lift label colour when its sibling input is focused */
+.form-field:focus-within .form-label {
+    color: var(--gold-mid);
+}
+
 .contact-input,
 .contact-form textarea {
     width: 100%;
@@ -1353,9 +1456,9 @@ body {
     background-color: transparent;
     color: var(--text-primary);
     border: none;
-    margin: 0 0 1.2rem 0;
+    margin: 0;
     resize: none;
-    outline: none;
+    /* outline removed here — handled by :focus-visible in the reset */
 }
 
 .contact-input {
@@ -1363,8 +1466,12 @@ body {
     transition: border-color 0.3s, background-color 0.3s;
 }
 
-.contact-input:focus {
+/* Focus indicator: border-color change is the design's intentional signal.
+   Suppress the global :focus-visible ring so it doesn't break the layout. */
+.contact-input:focus,
+.contact-input:focus-visible {
     border-bottom-color: var(--gold-mid);
+    outline: none;
 }
 
 .contact-form textarea {
@@ -1377,8 +1484,10 @@ body {
     transition: border-color 0.3s;
 }
 
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.contact-form textarea:focus-visible {
     border-color: var(--gold-mid);
+    outline: none;
 }
 
 .contact-form-btn {
