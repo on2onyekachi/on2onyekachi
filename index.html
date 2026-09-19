@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -18,20 +19,18 @@
         href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Righteous&family=Roboto+Condensed&family=Ubuntu&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="stylesheet/css/fa/all.css">
-    <script src="stylesheet/js/lib/jquery.min.js"></script>
 
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="stylesheet/js/lib/bootstrap.min.js"></script>
     <link rel="stylesheet" href="stylesheet/css/main.css">
 </head>
+
 <body>
     <div class="loader-container" id="preloader">
         <div id="loader"></div>
     </div>
     <div class="container-wrapper">
-        <!-- HEADER SECTION -->
         <header>
             <nav class="navbar" aria-label="Main navigation">
                 <button class="navbar-toggler slide-menu" type="button" aria-controls="navbarMenu" aria-expanded="false"
@@ -42,8 +41,28 @@
                         <span class="bar bar-3"></span>
                     </span>
                 </button>
+                <button id="theme-toggle" class="navbar-toggler theme-toggle" aria-label="Toggle dark/light theme" aria-pressed="false" title="Toggle theme">
+                    <span class="theme-icon" aria-hidden="true">
+                        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor"/>
+                        </svg>
+                        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                            <g stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 1v2"/>
+                                <path d="M12 21v2"/>
+                                <path d="M4.22 4.22l1.42 1.42"/>
+                                <path d="M18.36 18.36l1.42 1.42"/>
+                                <path d="M1 12h2"/>
+                                <path d="M21 12h2"/>
+                                <path d="M4.22 19.78l1.42-1.42"/>
+                                <path d="M18.36 5.64l1.42-1.42"/>
+                            </g>
+                        </svg>
+                    </span>
+                </button>
             </nav>
-        
+
             <nav class="sidebar" id="navbarMenu" aria-label="Page sections">
                 <div class="sidebar-inner">
                     <ul class="menu">
@@ -56,9 +75,7 @@
                 </div>
             </nav>
         </header>
-        <!-- MAIN -->
         <main>
-            <!-- Banner -->
             <section class="banner home" id="home">
                 <div class="img-wrapper"></div>
                 <div class="header d-flex flex-column">
@@ -66,7 +83,6 @@
                     <p class="header-title">Software Engineer</p>
                 </div>
             </section>
-            <!-- About -->
             <section class="about text-light px-4" id="about">
                 <div class="section-header scroll-animate">
                     <h1 class="section-heading d-flex justify-content-center">About</h1>
@@ -74,13 +90,14 @@
                 </div>
                 <div class="d-flex flex-row justify-content-center">
                     <div class="row m-0">
-                        <div class="col-md-5 pl-0 my-5 scroll-animate-x">
+                        <div class="col-md-5 pl-0 my-5 about-img-col">
                             <div class="about-img-container" data-tilt data-tilt-max="4" data-tilt-glare="false"
                                 data-tilt-max-glare="0">
-                                <img class="img-fluid mx-auto" src="images/kachi_image-21.png" alt="Onyekachi Okwuolisa Image">
+                                <img class="img-fluid mx-auto" src="images/kachi_image-21.png"
+                                    alt="Onyekachi Okwuolisa Image">
                             </div>
                         </div>
-                        <div class="col-md-7 scroll-animate-y">
+                        <div class="col-md-7 about-text-col">
                             <div class="about-me-wrapper">
                                 <div class="type-wrap">
                                     <i class="fa fa-quote-left" aria-hidden="true"></i>
@@ -88,17 +105,22 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h2 class="text-head">
-                                            Hi, I’m <span class="color-g">Onyekachi</span> — a software engineer focused on front-end development, building responsive, performant web
+                                            Hi, I’m <span class="color-g">Onyekachi</span> — a software engineer focused
+                                            on front-end development, building responsive, performant web
                                             applications with clean, maintainable code.
                                         </h2>
                                         <p class="text-muted">
-                                            With a background in engineering, I naturally gravitate toward structured problem-solving. I enjoy breaking down
-                                            complex, messy problems into clean, intuitive interfaces that make sense to real users.
+                                            With a background in engineering, I naturally gravitate toward structured
+                                            problem-solving. I enjoy breaking down
+                                            complex, messy problems into clean, intuitive interfaces that make sense to
+                                            real users.
                                         </p>
-                                    
+
                                         <p class="text-muted">
-                                            I focus on building responsive and reliable web applications where performance, usability, and attention to detail
-                                            matter. I care about how systems behave under constraints and how small decisions affect the overall user
+                                            I focus on building responsive and reliable web applications where
+                                            performance, usability, and attention to detail
+                                            matter. I care about how systems behave under constraints and how small
+                                            decisions affect the overall user
                                             experience.
                                         </p>
                                         <a href="Onyekachi Okwuolisa SE_CV.pdf" class="link-btn-style" target="_blank">
@@ -111,64 +133,63 @@
                     </div>
                 </div>
             </section>
-            <!-- Tech Stack -->
             <section class="tech-stack text-light px-4" id="tech-stack">
                 <div class="section-header scroll-animate">
                     <h1 class="section-heading d-flex justify-content-center">Tech Stack</h1>
                     <div class="underline"></div>
                 </div>
-                <div class="container-fluid px-4">
+                <div class="container-fluid">
                     <div class="periodic-table-wrapper">
                         <div class="tech-element el-html frontend" data-symbol="Ht">
                             <span class="el-name">HTML5</span>
                             <img src="./images/icons8-html-5-48.png" alt="HTML5">
                         </div>
-                    
+
                         <div class="tech-element el-js frontend" data-symbol="Js">
                             <span class="el-name">JavaScript</span>
                             <img src="./images/icons8-javascript-48.png" alt="JavaScript">
                         </div>
-                    
+
                         <div class="tech-element el-css frontend" data-symbol="Cs">
                             <span class="el-name">CSS3</span>
                             <img src="./images/icons8-css3-48.png" alt="CSS3">
                         </div>
-                    
+
                         <div class="tech-element el-tailwind frontend" data-symbol="Tw">
                             <span class="el-name">Tailwind</span>
                             <img src="./images/icons8-tailwindcss-48.png" alt="Tailwind CSS">
                         </div>
-                    
+
                         <div class="tech-element el-node backend" data-symbol="No">
                             <span class="el-name">Node.js</span>
                             <img src="./images/icons8-node-js-48.png" alt="Node.js">
                         </div>
-                    
+
                         <div class="tech-element el-ts frontend" data-symbol="Ts">
                             <span class="el-name">TypeScript</span>
                             <img src="./images/icons8-typescript-48.png" alt="TypeScript">
                         </div>
-                    
+
                         <div class="tech-element el-react frontend" data-symbol="Re">
                             <span class="el-name">React.js</span>
                             <img src="./images/icons8-react-native-48.png" alt="React.js">
                         </div>
-                    
+
                         <div class="tech-element el-next frontend" data-symbol="Nx">
                             <span class="el-name">Next.js</span>
                             <img src="./images/icons8-next.js-48.png" alt="Next.js">
                         </div>
-                    
+
                         <div class="tech-element el-postgres database" data-symbol="Pg">
                             <span class="el-name">Postgres</span>
                             <img src="./images/icons8-postgresql-48.png" alt="PostgreSQL">
                         </div>
-                    
+
                         <div class="tech-element el-firebase database" data-symbol="Fb">
                             <span class="el-name">Firebase</span>
                             <img src="./images/icons8-firebase-48.png" alt="Firebase">
                         </div>
-                    
+
                         <div class="tech-element el-git tool" data-symbol="Gt">
                             <span class="el-name">Git</span>
                             <img src="./images/icons8-git-48.png" alt="Git">
@@ -176,24 +197,63 @@
                     </div>
                 </div>
             </section>
-            <!-- PROJECT -->
-            <section class="project text-light px-4" id="project">
+            <section class="project text-light" id="project">
                 <div class="section-header scroll-animate">
                     <h1 class="section-heading d-flex justify-content-center">Projects</h1>
                     <div class="underline"></div>
                 </div>
                 <div class="container-fluid">
-                    <!-- Horizontal scroll -->
                     <div class="horizontal-wrapper">
                         <div class="horizontal-content">
+                            <div class="project-slide intro-holder-slide">
+                                <div class="intro-holder-content">
+                                    <div class="technical-meta">SELECTED WORK</div>
+                                
+                                    <h2 class="intro-holder-title">
+                                        From a design idea to code.
+                                        I create tailored digital assets for
+                                        <span class="color-g">web</span> and <span class="color-g">mobile devices</span>.
+                                    </h2>
+                                
+                                    <p class="intro-holder-subtitle">
+                                        A design has no fixed solution. It is a creative pursuit—high quality
+                                        craftsmanship conveys meaning.
+                                    </p>
+
+                                    <!-- High-End Structural Content to eliminate the mobile void -->
+                                    <div class="intro-core-focus">
+                                        <div class="focus-item">
+                                            <span class="focus-number">01 /</span>
+                                            <span class="focus-text">Frontend Architecture</span>
+                                        </div>
+                                        <div class="focus-item">
+                                            <span class="focus-number">02 /</span>
+                                            <span class="focus-text">Interactive Interfaces</span>
+                                        </div>
+                                        <div class="focus-item">
+                                            <span class="focus-number">03 /</span>
+                                            <span class="focus-text">Scalable Web Apps</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="scroll-hint-container">
+                                        <span class="hint-text">Keep Scrolling or use arrow keys</span>
+                                        <div class="hint-line-wrapper">
+                                            <div class="hint-moving-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="project-slide">
                                 <div class="project-meta-side">
                                     <div class="project-num">1</div>
                                     <div class="project-details">
                                         <h3 class="project-title">Moonlight <span class="badge-label">Beta</span></h3>
                                         <p class="project-desc">
-                                            A secure, full-stack application engineered to allow students to anonymously report incidents of
-                                            misconduct to institutional authorities. Built with emphasis on data privacy, secure routing, and
+                                            A secure, full-stack application engineered to allow students to anonymously
+                                            report incidents of
+                                            misconduct to institutional authorities. Built with emphasis on data
+                                            privacy, secure routing, and
                                             fluid interface responses.
                                         </p>
                                         <div class="project-tech-tags">
@@ -204,30 +264,35 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noreferrer" class="overlay-btn">
+                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noreferrer"
+                                            class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
-                                        <a href="https://github.com/on2onyekachi" target="_blank" rel="noreferrer" class="overlay-btn">
+                                        <a href="https://github.com/on2onyekachi" target="_blank" rel="noreferrer"
+                                            class="overlay-btn">
                                             <i class="fab fa-github" aria-hidden="true"></i> Source Code
                                         </a>
                                     </div>
                                     <div class="image-container-wrapper">
-                                        <img src="images/m1.jpg" alt="Moonlight Project Screenshot" class="project-display-img" />
+                                        <img src="images/m1.jpg" alt="Moonlight Project Screenshot"
+                                            class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
-                        
+
                             <div class="project-slide">
                                 <div class="project-meta-side">
                                     <div class="project-num">2</div>
                                     <div class="project-details">
                                         <h3 class="project-title">Weather PWA</h3>
                                         <p class="project-desc">
-                                            A performance-optimized Progressive Web Application delivering real-time atmospheric updates.
-                                            Features asynchronous global location queries and service worker implementation for offline access
+                                            A performance-optimized Progressive Web Application delivering real-time
+                                            atmospheric updates.
+                                            Features asynchronous global location queries and service worker
+                                            implementation for offline access
                                             to cached histories.
                                         </p>
                                         <div class="project-tech-tags">
@@ -238,31 +303,35 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noreferrer" class="overlay-btn">
+                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noreferrer"
+                                            class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
-                                        <a href="https://github.com/on2onyekachi/Weather-PWA" target="_blank" rel="noreferrer"
-                                            class="overlay-btn">
+                                        <a href="https://github.com/on2onyekachi/Weather-PWA" target="_blank"
+                                            rel="noreferrer" class="overlay-btn">
                                             <i class="fab fa-github" aria-hidden="true"></i> Source Code
                                         </a>
                                     </div>
                                     <div class="image-container-wrapper">
-                                        <img src="images/w1.png" alt="Weather PWA Screenshot" class="project-display-img" />
+                                        <img src="images/w1.png" alt="Weather PWA Screenshot"
+                                            class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
-                        
+
                             <div class="project-slide">
                                 <div class="project-meta-side">
                                     <div class="project-num">3</div>
                                     <div class="project-details">
                                         <h3 class="project-title">Pacetone</h3>
                                         <p class="project-desc">
-                                            A communication analytics application that evaluates tone, clarity, and structural balance in text.
-                                            Integrated with the Gemini API for deep linguistic critique, delivering actionable stylistic
+                                            A communication analytics application that evaluates tone, clarity, and
+                                            structural balance in text.
+                                            Integrated with the Gemini API for deep linguistic critique, delivering
+                                            actionable stylistic
                                             feedback via a real-time interface.
                                         </p>
                                         <div class="project-tech-tags">
@@ -273,10 +342,11 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="project-image-side">
                                     <div class="project-links-overlay">
-                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noreferrer" class="overlay-btn">
+                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noreferrer"
+                                            class="overlay-btn">
                                             See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
                                         </a>
                                         <span class="overlay-btn opacity-disabled">
@@ -284,95 +354,103 @@
                                         </span>
                                     </div>
                                     <div class="image-container-wrapper">
-                                        <img src="images/p1.png" alt="Pacetone Project Screenshot" class="project-display-img" />
+                                        <img src="images/p1.png" alt="Pacetone Project Screenshot"
+                                            class="project-display-img" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- /.horizontal-wrapper -->
-                    
+                    </div>
                     <div class="section-inner">
                         <div class="project-github-cta">
-                            <a href="https://github.com/on2onyekachi" class="link-btn-style" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/on2onyekachi" class="link-btn-style" target="_blank"
+                                rel="noopener noreferrer">
                                 More on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- CONTACT -->
-            <section class="contact text-light px-4" id="contact">
+            <section class="contact text-light" id="contact">
                 <div class="section-header scroll-animate">
                     <h1 class="section-heading d-flex justify-content-center">Contact</h1>
                     <div class="underline"></div>
                 </div>
+            
                 <div class="container-fluid">
                     <div class="d-flex justify-content-center">
-                        <div class="contact-wrapper">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="contact-container">
-                                        <h4 class="sent-notification"></h4>
-                                        <form class="contact-form" id="myForm" method="POST" data-netlify="true">
-                                            <input class="contact-input" type="text" name="name" id="name"
-                                                placeholder="Name" maxlength="30">
-                                            <input class="contact-input" type="email" id="email" name="email"
-                                                placeholder="Email">
-                                            <input class="contact-input" type="text" id="subject" name="subject"
-                                                placeholder="Subject">
-                                            <textarea id="message" cols="1" rows="3" name="message"
-                                                placeholder="What can i do for you?"></textarea>
-                                            <input class="contact-form-btn" type="submit" value="Send">
-                                        </form>
-                                    </div>
+                        <div class="row contact-wrapper">
+            
+                            <div class="col-md-6 gsap-contact-form">
+                                <div class="contact-container form-side">
+                                    <h4 class="sent-notification"></h4>
+                                    <form class="contact-form" id="myForm" method="POST" data-netlify="true"
+                                        netlify-honeypot="bot-field">
+                                        <p class="d-none">
+                                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                                        </p>
+                                        <input class="contact-input" type="text" name="name" id="name" placeholder="Name"
+                                            maxlength="40" required>
+                                        <input class="contact-input" type="email" id="email" name="email" placeholder="Email"
+                                            maxlength="40" required>
+                                        <input class="contact-input" type="text" id="subject" name="subject" placeholder="Subject"
+                                            maxlength="40" required>
+                                        <textarea id="message" cols="1" rows="3" name="message" placeholder="What can i do for you?"
+                                            maxlength="120" required></textarea>
+                                        <input class="contact-form-btn" type="submit" value="Send Message">
+                                    </form>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="contact-container">
-                                        <h2 class="text-head"> <span class="color-g">Get</span> in touch</h2>
-                                        <p class="text-muted">Let's stay updated and connected. Feel free to reach out
-                                            to me.</p>
-                                        <div class="contact-info">
-                                            <ul class="details">
-                                                <li class="text-muted"><i
-                                                        class="fas fa-map-marker-alt color-g pr-3"></i>Lagos. Nigeria
-                                                </li>
-                                                <li class="text-muted"><i
-                                                        class="fas fa-envelope color-g pr-3"></i>onyekachiokwuolisa@gmail.com
-                                                </li>
-                                            </ul>
-                                            <div class="social-media">
-                                                <a href="https://github.com/on2onyekachi" target="_blank"
-                                                    class="social-media-link" title="View me on Github">
-                                                    <i class="fab fa-github"></i>
-                                                </a>
-
-                                                <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank"
-                                                    class="social-media-link" title="Follow me on Linkedin">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-
-                                                <a href="https://twitter.com/kachi_okwuolisa" target="_blank"
-                                                    class="social-media-link" title="Follow me on X">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </div>
+                            </div>
+            
+                            <div class="col-md-6 gsap-contact-info">
+                                <div class="contact-container info-side">
+                                    <h2 class="text-head"> <span class="color-g">Get</span> in touch</h2>
+                                    <p class="text-muted-desc">Let's stay connected. Feel free to reach out to me.</p>
+                                    <div class="contact-info">
+                                        <ul class="details">
+                                            <li>
+                                                <i class="fas fa-map-marker-alt color-g"></i>
+                                                <span>Lagos, Nigeria</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-envelope color-g"></i>
+                                                <span>onyekachiokwuolisa@gmail.com</span>
+                                            </li>
+                                        </ul>
+                                        <div class="social-media">
+                                            <a href="https://github.com/on2onyekachi" target="_blank" class="social-media-link"
+                                                title="View me on Github">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+            
+                                            <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank"
+                                                class="social-media-link" title="Follow me on Linkedin">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+            
+                                            <a href="https://twitter.com/kachi_okwuolisa" target="_blank" class="social-media-link"
+                                                title="Follow me on X">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+            
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <!-- FOOTER -->
-        <footer class="footer bg-black">
-            <div class="d-flex justify-content-center container-fluid">
-                <small class="copyright text-muted px-4">Copyright &copy; Onyekachi Okwuolisa. all rights reserved.</small>
+        <footer class="footer">
+            <div class="footer-inner">
+                <small class="copyright">© Onyekachi Okwuolisa. All rights reserved.</small>
+                <span class="footer-mark">Built with craft.</span>
             </div>
         </footer>
     </div>
     <script src="stylesheet/js/lib/tilt.js"></script>
     <script type="text/javascript" src="stylesheet/js/main.js"></script>
 </body>
+
 </html>
