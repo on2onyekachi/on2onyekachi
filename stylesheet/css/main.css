@@ -1496,27 +1496,19 @@ body {
     gap: 0;
 }
 
-/* Form field wrapper — label sits above input (WCAG Rule 6) */
+/* Form field wrapper — keeps label paired with input */
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    margin-bottom: 1.2rem;
 }
 
+/* Label inherits the container font exactly as the inputs do */
 .form-label {
-    font-family: var(--font-ui), sans-serif;
+    font-family: var(--font-l), 'Lato', sans-serif;
     font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    transition: color 0.25s;
-}
-
-/* Lift label colour when its sibling input is focused */
-.form-field:focus-within .form-label {
-    color: var(--gold-mid);
+    color: var(--text-secondary);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.04em;
 }
 
 .contact-input,
@@ -1527,9 +1519,10 @@ body {
     background-color: transparent;
     color: var(--text-primary);
     border: none;
-    margin: 0;
+    margin: 0 0 1.2rem 0;
     resize: none;
-    /* outline removed here — handled by :focus-visible in the reset */
+    font-family: var(--font-l), 'Lato', sans-serif;
+    font-size: inherit;
 }
 
 .contact-input {
@@ -1537,8 +1530,6 @@ body {
     transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* Focus indicator: border-color change is the design's intentional signal.
-   Suppress the global :focus-visible ring so it doesn't break the layout. */
 .contact-input:focus,
 .contact-input:focus-visible {
     border-bottom-color: var(--gold-mid);
@@ -1553,6 +1544,8 @@ body {
     padding: 0.8rem;
     margin-top: 0.4rem;
     transition: border-color 0.3s;
+    font-family: var(--font-l), 'Lato', sans-serif;
+    font-size: inherit;
 }
 
 .contact-form textarea:focus,
@@ -2176,26 +2169,26 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
-}
 
-.tech-element::after {
-    top: 10px;
-    right: 12px;
-    font-size: 0.55rem;
-}
+    .tech-element::after {
+        top: 10px;
+        right: 12px;
+        font-size: 0.55rem;
+    }
 
-.tech-element img {
-    width: 28px;
-    height: 28px;
-}
+    .tech-element img {
+        width: 28px;
+        height: 28px;
+    }
 
-.el-name {
-    font-size: 0.8rem;
-}
+    .el-name {
+        font-size: 0.8rem;
+    }
 
-.focus-text {
-    font-size: 0.75rem;
-}
+    .focus-text {
+        font-size: 0.75rem;
+    }
+
 }
 
 @media (max-width: 479px) {
