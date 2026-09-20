@@ -218,19 +218,61 @@ textarea:focus:not(:focus-visible) {
    Minimal replacements for Bootstrap utilities still used in
    the HTML markup. Keeps layout intact without loading Bootstrap.
 ─────────────────────────────────────────────────────────── */
-.d-flex            { display: flex !important; }
-.flex-column       { flex-direction: column !important; }
-.flex-row          { flex-direction: row !important; }
-.justify-content-center { justify-content: center !important; }
-.align-items-center     { align-items: center !important; }
-.d-none            { display: none !important; }
-.img-fluid         { max-width: 100%; height: auto; }
-.mx-auto           { margin-left: auto !important; margin-right: auto !important; }
-.my-5              { margin-top: 3rem !important; margin-bottom: 3rem !important; }
-.pl-0              { padding-left: 0 !important; }
-.px-4              { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-.text-light        { color: var(--text-primary) !important; }
-.text-muted        { color: var(--text-secondary) !important; }
+.d-flex {
+    display: flex !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.px-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.text-light {
+    color: var(--text-primary) !important;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
 
 .row {
     display: flex;
@@ -238,7 +280,10 @@ textarea:focus:not(:focus-visible) {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
 }
-.m-0 { margin: 0 !important; }
+
+.m-0 {
+    margin: 0 !important;
+}
 
 [class*="col-"] {
     padding-left: 0.75rem;
@@ -246,14 +291,30 @@ textarea:focus:not(:focus-visible) {
     box-sizing: border-box;
 }
 
-.col-md-5 { width: 100%; }
-.col-md-6 { width: 100%; }
-.col-md-7 { width: 100%; }
+.col-md-5 {
+    width: 100%;
+}
+
+.col-md-6 {
+    width: 100%;
+}
+
+.col-md-7 {
+    width: 100%;
+}
 
 @media (min-width: 768px) {
-    .col-md-5 { width: 41.6667%; }
-    .col-md-6 { width: 50%; }
-    .col-md-7 { width: 58.3333%; }
+    .col-md-5 {
+        width: 41.6667%;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    .col-md-7 {
+        width: 58.3333%;
+    }
 }
 
 .container-fluid {
@@ -379,6 +440,7 @@ body:not(.gsap-loaded) .project-slide:hover .project-display-img {
 /* ── REDUCED MOTION (accessibility) ────────────────────── */
 /* Respects the user's OS "reduce motion" preference        */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -431,18 +493,24 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    border: none;
+    box-shadow: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar-toggler:hover {
     background: rgba(65, 64, 63, 0.34);
 }
 
-/* Theme toggle button (sits next to hamburger) */
+/* Suppress global focus ring — icon buttons are visually self-evident */
+.navbar-toggler:focus-visible,
+.theme-toggle:focus-visible {
+    outline: none;
+}
+
+/* Theme toggle button (sits below hamburger) */
 .theme-toggle {
     width: 44px;
     height: 44px;
@@ -450,6 +518,8 @@ body {
     align-items: center;
     justify-content: center;
     background: transparent;
+    border: none;
+    box-shadow: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.25s ease, color 0.25s ease;
@@ -1217,7 +1287,8 @@ body {
         left: -100%;
     }
 
-    50%, 100% {
+    50%,
+    100% {
         left: 100%;
     }
 }
@@ -2010,9 +2081,121 @@ body {
     .el-name {
         font-size: 0.8rem;
     }
+
     .focus-text {
         font-size: 0.75rem;
     }
+}
+
+@media (max-width: 479px) {
+    .header {
+        margin-right: 20px;
+    }
+
+    .header h1 {
+        line-height: 4rem;
+        text-align: center;
+    }
+
+    .header .header-title {
+        text-align: center;
+    }
+
+    .about-img-container {
+        max-width: 220px;
+    }
+
+    .about .text-muted {
+        font-size: calc(var(--font-size-s) * 0.95);
+        line-height: 1.6;
+    }
+
+    .project-num {
+        font-size: clamp(3rem, 18vw, 7rem);
+    }
+
+    .project-details {
+        max-width: 100%;
+    }
+
+    .project-image-side {
+        max-height: clamp(28vh, 60%, 45vh);
+        min-height: 200px;
+    }
+
+    .badge-dark {
+        font-size: clamp(0.7rem, 1.8vw, 1.3rem);
+        padding: 2px 4px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+    }
+
+    .overlay-btn {
+        font-size: clamp(0.5rem, 1.2vw, 0.7rem);
+    }
+
+    .image-container-wrapper {
+        min-height: 200px;
+    }
+
+    .contact-wrapper {
+        padding: 0 20px !important;
+    }
+
+    .contact-form-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .tech-element {
+        padding: 10px;
+    }
+
+    .tech-element::before {
+        font-size: 0.85rem;
+        left: 8px;
+    }
+
+    .tech-element::after {
+        right: 8px;
+    }
+
+    .tech-element img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+    }
+
+    .el-name {
+        font-size: 0.75rem;
+    }
+
+    .intro-core-focus {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.tech-element::after {
+    top: 10px;
+    right: 12px;
+    font-size: 0.55rem;
+}
+
+.tech-element img {
+    width: 28px;
+    height: 28px;
+}
+
+.el-name {
+    font-size: 0.8rem;
+}
+
+.focus-text {
+    font-size: 0.75rem;
+}
 }
 
 @media (max-width: 479px) {
