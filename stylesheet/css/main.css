@@ -744,7 +744,7 @@ body {
     font-family: Rel, 'Ubuntu', sans-serif;
     margin-top: -12px;
     font-size: var(--font-size-m);
-    color: var(--text-primary);
+    color: var(--gold-bright);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
