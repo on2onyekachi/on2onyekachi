@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#17181b" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Chylitics case study: retail analytics for small shops, with stock tracked by batch and every shop's data kept apart by the database. Built by Onyekachi Okwuolisa.">
+    <title>Chylitics — Onyekachi Okwuolisa</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap">
+    <link rel="stylesheet" href="../stylesheet/css/editorial-v6.css">
+    <link rel="stylesheet" href="../stylesheet/css/case-study.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#overview">Skip to the case study</a>
+
+    <header class="case-top">
+      <a href="../index.html#work">← Selected work</a>
+      <span class="read">4 minute read</span>
+    </header>
+
+    <main class="case-wrap">
+      <section class="case-intro">
+        <h1>Showing small shops what their sales data already knows.</h1>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Full-stack engineering, from database design to deployment</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Platform</dt><dd>Web app, desktop and mobile</dd></div>
+          <div><dt>Status</dt><dd>Live · <a href="https://chylitics-test.vercel.app/" target="_blank" rel="noopener noreferrer">Visit the site ↗</a></dd></div>
+        </dl>
+      </section>
+
+      <figure class="case-figure case-hero reveal">
+        <div class="case-mat">
+          <img class="desk" src="../images/cases/chylitics-home.png" alt="Chylitics home page: turn retail data into profitable decisions, with revenue, profit, margin and units sold" width="1440" height="900">
+          <img class="phone" src="../images/cases/chylitics-mobile.png" alt="Chylitics on a phone" width="390" height="844">
+        </div>
+      </figure>
+
+      <div class="case-body">
+        <nav class="case-toc" aria-label="Case study sections">
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#outcome">Outcome</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          <section class="case-section reveal" id="overview">
+            <h2>Overview</h2>
+            <p class="lede">Chylitics is retail analytics for small grocery, ethnic, convenience and beauty stores. A shop uploads its sales file and sees what is selling, what is stuck, what is about to expire and what to do next.</p>
+            <p>I built it end to end: the database, the security rules, the dashboards and the email alerts.</p>
+          </section>
+
+          <section class="case-section reveal" id="problem">
+            <h2>The data is there. The answers aren’t.</h2>
+            <p>Small retailers already have their sales in a point-of-sale export or a spreadsheet. What they don’t have is time to turn it into decisions: which products actually make money, which ones are tying up cash, and which batches will expire on the shelf.</p>
+            <p>Most analytics tools are built for chains, priced for chains, and expect a data team to set them up.</p>
+          </section>
+
+          <section class="case-section reveal" id="approach">
+            <h2>Three rules I built around.</h2>
+            <ul class="case-principles">
+              <li><strong>Start from a file</strong><span>No integrations to set up on day one. Upload the CSV a shop already has, and the dashboard fills in.</span></li>
+              <li><strong>Trust the numbers</strong><span>Uploading the same file twice must never count a sale twice, and stock comes out of the oldest batch first, the way a real shelf works.</span></li>
+              <li><strong>Keep shops apart</strong><span>One shop must never see another’s data. That rule lives in the database itself, not only in the app code, and it is tested.</span></li>
+            </ul>
+          </section>
+
+          <section class="case-section" id="solution">
+            <h2>From a sales file to a decision.</h2>
+
+            <div class="case-feature reveal">
+              <h3>One view of the business</h3>
+              <p>Revenue, profit, margin and units sold sit at the top, with the trend underneath, so the owner can see in seconds whether the month is going well.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/chylitics-preview.png" alt="Dashboard preview with revenue, profit, margin, units sold and a bar chart of daily sales" width="1440" height="900"></div>
+                <figcaption>The first thing a shop owner sees after uploading.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>Six areas, one job each</h3>
+              <p>Product performance, profitability, inventory, recommendations, customer insights and a simple revenue forecast. Each answers one question a shop owner actually asks.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/chylitics-features.png" alt="Six feature cards: product performance, profitability analysis, inventory intelligence, actionable recommendations, customer insights and revenue forecasting" width="1440" height="900"></div>
+                <figcaption>Built for small stores, not for chains with a data team.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>An email before it becomes a loss</h3>
+              <p>When stock runs low or a batch gets close to its expiry date, the shop gets an email, with the products and what to do about them. Owners choose which alerts they want.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" style="max-width: 380px" src="../images/chylitics-alert.png" alt="A Chylitics alert email listing products that are low on stock or close to expiry" width="574" height="816"></div>
+                <figcaption>Alerts arrive where the owner already is: their inbox.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="case-section reveal" id="outcome">
+            <h2>Where it stands.</h2>
+            <p>Chylitics is live with sign-up, uploads, dashboards and email alerts working. Next is connecting point-of-sale systems directly, so shops don’t need to export a file at all.</p>
+            <div class="case-stats">
+              <div><b>31</b><span>database security rules keeping each shop’s data separate</span></div>
+              <div><b>10</b><span>database test suites, from duplicate uploads to account deletion</span></div>
+              <div><b>22</b><span>database migrations, each one versioned</span></div>
+            </div>
+            <ul class="case-tags" aria-label="Technologies">
+              <li>Next.js</li><li>TypeScript</li><li>React</li><li>Supabase</li><li>PostgreSQL</li><li>Row-level security</li><li>pgTAP</li><li>Tailwind CSS</li><li>Resend</li><li>Vercel</li>
+            </ul>
+          </section>
+
+          <section class="case-section reveal" id="reflection">
+            <h2>Reflection</h2>
+            <p>The interesting work here was underneath the charts. A dashboard is only as good as the numbers going into it, so most of my time went into making uploads safe to repeat, stock movements exact, and data separation something the database proves rather than something the app promises.</p>
+          </section>
+        </div>
+      </div>
+
+      <a class="case-next reveal" href="freedom-connect.html">
+        <div><small>Next project</small><strong>Freedom Connect</strong></div>
+        <div class="case-mat"><img class="desk" src="../images/cases/freedom-home.png" alt="" width="1440" height="900"></div>
+      </a>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="footer-label">Have a project in mind?</p>
+        <a class="footer-email" href="mailto:onyekachiokwuolisa@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+        <p class="footer-copy">
+          <span>onyekachiokwuolisa@gmail.com</span>
+          <button type="button" data-copy="onyekachiokwuolisa@gmail.com">Copy</button>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>Onyekachi Okwuolisa</p>
+        <nav aria-label="Social links">
+          <a href="https://github.com/on2onyekachi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/kachi_okwuolisa" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </nav>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="../stylesheet/js/case-study.js" defer></script>
+    <script src="../stylesheet/js/font-lab.js" defer></script>
+  </body>
+</html>

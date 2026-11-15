@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#17181b" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Pacetone case study: a writing tool that shows how a message will land before you send it. Designed and built by Onyekachi Okwuolisa.">
+    <title>Pacetone — Onyekachi Okwuolisa</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap">
+    <link rel="stylesheet" href="../stylesheet/css/editorial-v6.css">
+    <link rel="stylesheet" href="../stylesheet/css/case-study.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#overview">Skip to the case study</a>
+
+    <header class="case-top">
+      <a href="../index.html#work">← Selected work</a>
+      <span class="read">4 minute read</span>
+    </header>
+
+    <main class="case-wrap">
+      <section class="case-intro">
+        <h1>Hearing your own tone before anyone else does.</h1>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Product design and full-stack engineering</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Platform</dt><dd>Web, desktop and mobile</dd></div>
+          <div><dt>Status</dt><dd>Live · <a href="https://pacetone.vercel.app/" target="_blank" rel="noopener noreferrer">Visit the site ↗</a></dd></div>
+        </dl>
+      </section>
+
+      <figure class="case-figure case-hero reveal">
+        <div class="case-mat">
+          <img class="desk" src="../images/cases/pacetone-home.png" alt="Pacetone home page with a tone profile scoring a message 82 for empathy, 68 for directness and 74 for leadership" width="1440" height="900">
+          <img class="phone" src="../images/cases/pacetone-mobile.png" alt="Pacetone home page on a phone" width="390" height="844">
+        </div>
+      </figure>
+
+      <div class="case-body">
+        <nav class="case-toc" aria-label="Case study sections">
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#outcome">Outcome</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          <section class="case-section reveal" id="overview">
+            <h2>Overview</h2>
+            <p class="lede">Pacetone scores a draft on empathy, directness and leadership, shows the exact phrases behind each score, and rewrites the message for the goal you choose.</p>
+            <p>I designed and built it on my own, from the product brief to the version that is live today.</p>
+          </section>
+
+          <section class="case-section reveal" id="problem">
+            <h2>The message you meant is not always the one they read.</h2>
+            <p>People send messages that matter — feedback, escalations, client updates — with no signal of how they will land. The cost of the wrong tone is real: lost trust, defensive replies, problems that grow. And you only find out after you press send.</p>
+            <p>Grammar tools fix correctness, not perception. Generic AI rewriters go the other way and turn everything into polite filler that sounds like nobody.</p>
+            <p class="case-quote">“Help me sound firm without sounding like a jerk.” — the new manager I designed for first.</p>
+          </section>
+
+          <section class="case-section reveal" id="approach">
+            <h2>Three rules I held the product to.</h2>
+            <p>Before any screens, I wrote down what would make Pacetone different from asking a chatbot to “make this nicer”.</p>
+            <ul class="case-principles">
+              <li><strong>Name the tone</strong><span>Three clear scores instead of one vague label, so you know which part of the message to fix.</span></li>
+              <li><strong>Show the why</strong><span>Point at the exact phrases behind each score and explain them, rather than just grading the whole draft.</span></li>
+              <li><strong>Sound like you</strong><span>Rewrites follow your goal and your voice, in plain human language, not AI-speak.</span></li>
+            </ul>
+          </section>
+
+          <section class="case-section" id="solution">
+            <h2>From a draft to a message you can send.</h2>
+
+            <div class="case-feature reveal">
+              <h3>A score you can act on</h3>
+              <p>Every draft gets a tone profile. The three numbers sit side by side, so it is obvious when, say, directness is drowning out empathy.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/pacetone-scores.png" alt="Tone profile showing empathy 82, directness 68 and leadership 74" width="568" height="258"></div>
+                <figcaption>The tone profile: one score for each quality, readable at a glance.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>The reason, then the rewrite</h3>
+              <p>Below the scores, Pacetone says in one sentence what is going wrong, then offers a rewrite that keeps your point and fixes the tone.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/pacetone-rewrite.png" alt="An insight saying the message reads as clear but assertive to the point of aggression, followed by a suggested rewrite" width="568" height="268"></div>
+                <figcaption>“Clear but assertive to the point of aggression” — then a version that still asks for the fix, without the edge.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>Built to be trusted with your words</h3>
+              <p>People paste sensitive drafts into Pacetone, so I kept sign-in self-hosted rather than handing it to a third party, stored everything in a Postgres database I control, and ran automated accessibility checks inside the end-to-end tests.</p>
+            </div>
+          </section>
+
+          <section class="case-section reveal" id="outcome">
+            <h2>Where it stands.</h2>
+            <p>Pacetone is live, and the next step is a paid beta.</p>
+            <div class="case-stats">
+              <div><b>3</b><span>scored qualities on every draft</span></div>
+              <div><b>20</b><span>automated test files, from units to full browser runs</span></div>
+              <div><b>1</b><span>person behind the design and the code</span></div>
+            </div>
+            <ul class="case-tags" aria-label="Technologies">
+              <li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Gemini API</li><li>PostgreSQL</li><li>Prisma</li><li>Better Auth</li><li>Playwright</li><li>axe</li>
+            </ul>
+          </section>
+
+          <section class="case-section reveal" id="reflection">
+            <h2>Reflection</h2>
+            <p>A rewrite is easy to copy. Explaining <em>why</em> a phrase lands badly is not, and putting that first shaped every screen. It is also where Pacetone goes next: showing people their own patterns over time, not just fixing one message.</p>
+          </section>
+        </div>
+      </div>
+
+      <a class="case-next reveal" href="emole.html">
+        <div><small>Next project</small><strong>Emole Futures</strong></div>
+        <div class="case-mat"><img class="desk" src="../images/cases/emole-home.png" alt="" width="1440" height="900"></div>
+      </a>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="footer-label">Have a project in mind?</p>
+        <a class="footer-email" href="mailto:onyekachiokwuolisa@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+        <p class="footer-copy">
+          <span>onyekachiokwuolisa@gmail.com</span>
+          <button type="button" data-copy="onyekachiokwuolisa@gmail.com">Copy</button>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>Onyekachi Okwuolisa</p>
+        <nav aria-label="Social links">
+          <a href="https://github.com/on2onyekachi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/kachi_okwuolisa" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </nav>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="../stylesheet/js/case-study.js" defer></script>
+    <script src="../stylesheet/js/font-lab.js" defer></script>
+  </body>
+</html>

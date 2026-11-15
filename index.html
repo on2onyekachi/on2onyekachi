@@ -1,499 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- ── PRIMARY META ─────────────────────────────────── -->
-    <title>Onyekachi Okwuolisa — Software Engineer</title>
-    <meta name="description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
-    <meta name="robots" content="index, follow">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#17181b" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Onyekachi Okwuolisa is a frontend software engineer in Lagos, building fast, accessible web products with React, Next.js and TypeScript.">
     <meta name="author" content="Onyekachi Okwuolisa">
-
-    <!-- ── OPEN GRAPH (LinkedIn / Facebook previews) ────── -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Onyekachi Okwuolisa — Software Engineer">
-    <meta property="og:description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
-    <meta property="og:image" content="/images/kachi_image-21.png">
+    <meta property="og:title" content="Onyekachi Okwuolisa — Frontend Software Engineer">
+    <meta property="og:description" content="Web products built by Onyekachi Okwuolisa, a frontend software engineer in Lagos.">
+    <meta property="og:image" content="images/kachi_image-21.png">
     <meta property="og:url" content="https://on2onyekachi.netlify.app">
-    <meta property="og:site_name" content="Onyekachi Okwuolisa Portfolio">
-
-    <!-- ── TWITTER CARD ──────────────────────────────────── -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Onyekachi Okwuolisa — Software Engineer">
-    <meta name="twitter:description" content="Software Engineer specialising in front-end development. Building responsive, performant web applications with clean, maintainable code.">
-    <meta name="twitter:image" content="/images/kachi_image-21.png">
-    <meta name="twitter:site" content="@kachi_okwuolisa">
-
-    <!-- ── FAVICONS ──────────────────────────────────────── -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- ── FONTS: preconnect hints then single combined request ── -->
+    <title>Onyekachi Okwuolisa — Frontend Software Engineer</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&family=Roboto+Condensed&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap">
+    <link rel="stylesheet" href="stylesheet/css/editorial-v6.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to selected work</a>
 
-    <!-- ── ICONS: local copy only (CDN duplicate removed) ── -->
-    <link rel="stylesheet" href="stylesheet/css/fa/all.css">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-topline">
+          <p class="hero-intro">
+            I build web products that are fast,<br>
+            accessible, and easy to use.
+          </p>
+          <nav class="hero-nav" aria-label="Primary navigation">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <button class="stack-open stack-open--nav" type="button" data-open-stack>Stack</button>
+            <a href="#contact">Contact</a>
+            <a href="Onyekachi%20Okwuolisa%20SE_CV.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
 
-    <!-- ── GSAP: defer so scripts are non-render-blocking ── -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+        <p class="hero-context">
+          Frontend software engineer<br>
+          React, Next.js and TypeScript
+        </p>
 
-    <!-- ── MAIN STYLESHEET ───────────────────────────────── -->
-    <link rel="stylesheet" href="stylesheet/css/main.css">
-</head>
+        <h1 class="hero-title" id="hero-title">
+          <span>Onyekachi</span>
+          <span class="hero-title-last">Okwuolisa</span>
+        </h1>
 
-<body>
-    <div class="loader-container" id="preloader">
-        <div id="loader"></div>
-    </div>
-    <div class="container-wrapper">
-        <header>
-            <nav class="navbar" aria-label="Main navigation">
-                <button class="navbar-toggler slide-menu" type="button" aria-controls="navbarMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="hamburger-icon">
-                        <span class="bar bar-1"></span>
-                        <span class="bar bar-2"></span>
-                        <span class="bar bar-3"></span>
-                    </span>
-                </button>
-                <button id="theme-toggle" class="navbar-toggler theme-toggle" aria-label="Toggle dark/light theme" aria-pressed="false" title="Toggle theme">
-                    <span class="theme-icon" aria-hidden="true">
-                        <svg class="icon icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" fill="currentColor"/>
-                        </svg>
-                        <svg class="icon icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
-                            <g stroke="currentColor" stroke-width="1.5">
-                                <path d="M12 1v2"/>
-                                <path d="M12 21v2"/>
-                                <path d="M4.22 4.22l1.42 1.42"/>
-                                <path d="M18.36 18.36l1.42 1.42"/>
-                                <path d="M1 12h2"/>
-                                <path d="M21 12h2"/>
-                                <path d="M4.22 19.78l1.42-1.42"/>
-                                <path d="M18.36 5.64l1.42-1.42"/>
-                            </g>
-                        </svg>
-                    </span>
-                </button>
-            </nav>
+        <div class="card-rig">
+        <span class="card-nail" aria-hidden="true"></span>
+        <div class="card-swing">
+        <svg class="card-string" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><polyline points="12,16 50,0 88,16" /></svg>
+        <article class="identity-card" aria-label="Onyekachi Okwuolisa, frontend software engineer">
+          <img
+            class="identity-photo"
+            src="images/kachi_image-21.png"
+            alt="Portrait of Onyekachi Okwuolisa"
+            width="640"
+            height="800"
+            fetchpriority="high"
+          >
+          <div class="identity-copy">
+            <p class="identity-kicker">Currently</p>
+            <p class="identity-name">Onyekachi<br><span>Okwuolisa</span></p>
+            <p class="identity-role">Frontend software engineer<br>Lagos, Nigeria</p>
+            <a href="mailto:onyekachiokwuolisa@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        </div>
+        </div>
 
-            <nav class="sidebar" id="navbarMenu" aria-label="Page sections">
-                <div class="sidebar-inner">
-                    <ul class="menu">
-                        <li class="nav-item"><a href="#home" class="nav-link" data-content="Home">Home</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link" data-content="About">About</a></li>
-                        <li class="nav-item"><a href="#tech-stack" class="nav-link" data-content="Stack">Stack</a></li>
-                        <li class="nav-item"><a href="#project" class="nav-link" data-content="Work">Work</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link" data-content="Contact">Contact</a></li>
-                    </ul>
+        <!-- the bird that keeps straightening the card -->
+        <div class="bird" aria-hidden="true">
+          <svg viewBox="0 0 64 48">
+            <g class="bird-body">
+              <path class="bird-tail" d="M16 29 L2 24 L5 31 L3 36 Z" />
+              <path d="M14 30 C14 22 22 17.5 31 17.5 C37 17.5 41 19 43.5 21.5 C45 17 49.5 15.5 52.5 18 L59 20.5 L53 23 C52.5 27 50 30 46 32.5 C42 36.5 35 38.5 28.5 38 C20.5 37.5 14 35 14 30 Z" />
+              <circle class="bird-eye" cx="51.2" cy="19.6" r="1.25" />
+              <g class="bird-legs"><path d="M30 37.5 L29 45 M34.5 37.5 L35.5 45 M27 45 L31.5 45 M33 45 L38 45" /></g>
+            </g>
+            <path class="bird-wing" d="M41 24 C34 18.5 22 18 11 23.5 C19 26.5 29 30 38 30 C40.5 29 41.5 26.5 41 24 Z" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <h2 id="work-title">Selected work</h2>
+        </div>
+
+        <div class="project-list">
+          <article class="project-row">
+            <div class="project-copy">
+              <h3>Chylitics</h3>
+              <p class="project-description">
+                Retail analytics for small shops. Upload a sales file and see what’s selling, what’s stuck and what’s about to expire, with an email before stock runs out.
+              </p>
+              <div class="project-links">
+                <a href="work/chylitics.html">Read the case study <span aria-hidden="true">→</span></a>
+                <a href="https://chylitics-test.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>
+                <span class="project-private">Code is private</span>
+              </div>
+              <details class="project-more">
+                <summary>See more <span class="project-more-icon" aria-hidden="true"></span></summary>
+                <div class="project-more-body">
+                  <dl>
+                    <div><dt>Problem</dt><dd>Small grocery and beauty shops keep their sales in spreadsheets, but can’t easily tell which products make money or which batches are close to expiring.</dd></div>
+                    <div><dt>Solution</dt><dd>Upload a sales file and get profit, margin and stock in one dashboard. Stock is taken from the oldest batch first, and low-stock and expiry alerts arrive by email.</dd></div>
+                    <div><dt>My role</dt><dd>The full build, from database design to deployment. Each shop’s data is kept apart by the database itself, and that is covered by automated database tests.</dd></div>
+                  </dl>
+                  <ul class="project-tags" aria-label="Technologies">
+                    <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Row-level security</li><li>pgTAP</li><li>Tailwind CSS</li><li>Resend</li>
+                  </ul>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <section class="banner home" id="home">
-                <div class="img-wrapper"></div>
-                <div class="header d-flex flex-column">
-                    <h1>Onyekachi Okwuolisa</h1>
-                    <p class="header-title">Software Engineer</p>
-                </div>
-            </section>
-            <section class="about text-light px-4" id="about">
-                <div class="section-header scroll-animate">
-                    <h2 class="section-heading d-flex justify-content-center">About</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="d-flex flex-row justify-content-center">
-                    <div class="row m-0">
-                        <div class="col-md-5 pl-0 my-5 about-img-col">
-                            <div class="about-img-container" data-tilt data-tilt-max="4" data-tilt-glare="false"
-                                data-tilt-max-glare="0">
-                                <img class="img-fluid mx-auto" src="images/kachi_image-21.png"
-                                    alt="Onyekachi Okwuolisa — Software Engineer" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="col-md-7 about-text-col">
-                            <div class="about-me-wrapper">
-                                <div class="type-wrap">
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h2 class="text-head">
-                                            Hi, I’m <span class="color-g">Onyekachi</span> — a software engineer focused
-                                            on front-end development, building responsive, performant web
-                                            applications with clean, maintainable code.
-                                        </h2>
-                                        <p class="text-muted">
-                                            With a background in engineering, I naturally gravitate toward structured
-                                            problem-solving. I enjoy breaking down
-                                            complex, messy problems into clean, intuitive interfaces that make sense to
-                                            real users.
-                                        </p>
-
-                                        <p class="text-muted">
-                                            I focus on building responsive and reliable web applications where
-                                            performance, usability, and attention to detail
-                                            matter. I care about how systems behave under constraints and how small
-                                            decisions affect the overall user
-                                            experience.
-                                        </p>
-                                        <a href="Onyekachi Okwuolisa SE_CV.pdf" class="link-btn-style" target="_blank">
-                                            View CV
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="tech-stack text-light px-4" id="tech-stack">
-                <div class="section-header scroll-animate">
-                    <h2 class="section-heading d-flex justify-content-center">Tech Stack</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="container-fluid">
-                    <div class="periodic-table-wrapper">
-                        <div class="tech-element el-html frontend" data-symbol="Ht">
-                            <span class="el-name">HTML5</span>
-                            <img src="./images/icons8-html-5-48.png" alt="HTML5">
-                        </div>
-
-                        <div class="tech-element el-js frontend" data-symbol="Js">
-                            <span class="el-name">JavaScript</span>
-                            <img src="./images/icons8-javascript-48.png" alt="JavaScript">
-                        </div>
-
-                        <div class="tech-element el-css frontend" data-symbol="Cs">
-                            <span class="el-name">CSS3</span>
-                            <img src="./images/icons8-css3-48.png" alt="CSS3">
-                        </div>
-
-                        <div class="tech-element el-tailwind frontend" data-symbol="Tw">
-                            <span class="el-name">Tailwind</span>
-                            <img src="./images/icons8-tailwindcss-48.png" alt="Tailwind CSS">
-                        </div>
-
-                        <div class="tech-element el-node backend" data-symbol="No">
-                            <span class="el-name">Node.js</span>
-                            <img src="./images/icons8-node-js-48.png" alt="Node.js">
-                        </div>
-
-                        <div class="tech-element el-ts frontend" data-symbol="Ts">
-                            <span class="el-name">TypeScript</span>
-                            <img src="./images/icons8-typescript-48.png" alt="TypeScript">
-                        </div>
-
-                        <div class="tech-element el-react frontend" data-symbol="Re">
-                            <span class="el-name">React.js</span>
-                            <img src="./images/icons8-react-native-48.png" alt="React.js">
-                        </div>
-
-                        <div class="tech-element el-next frontend" data-symbol="Nx">
-                            <span class="el-name">Next.js</span>
-                            <img src="./images/icons8-next.js-48.png" alt="Next.js">
-                        </div>
-
-                        <div class="tech-element el-postgres database" data-symbol="Pg">
-                            <span class="el-name">Postgres</span>
-                            <img src="./images/icons8-postgresql-48.png" alt="PostgreSQL">
-                        </div>
-
-                        <div class="tech-element el-firebase database" data-symbol="Fb">
-                            <span class="el-name">Firebase</span>
-                            <img src="./images/icons8-firebase-48.png" alt="Firebase">
-                        </div>
-
-                        <div class="tech-element el-git tool" data-symbol="Gt">
-                            <span class="el-name">Git</span>
-                            <img src="./images/icons8-git-48.png" alt="Git">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="project text-light" id="project">
-                <div class="section-header scroll-animate">
-                    <h2 class="section-heading d-flex justify-content-center">Projects</h2>
-                    <div class="underline"></div>
-                </div>
-                <div class="container-fluid">
-                    <div class="horizontal-wrapper">
-                        <div class="horizontal-content">
-                            <div class="project-slide intro-holder-slide">
-                                <div class="intro-holder-content">
-                                    <div class="technical-meta">SELECTED WORK</div>
-                                
-                                    <h2 class="intro-holder-title">
-                                        From a design idea to code.
-                                        I create tailored digital assets for
-                                        <span class="color-g">web</span> and <span class="color-g">mobile devices</span>.
-                                    </h2>
-                                
-                                    <p class="intro-holder-subtitle">
-                                        A design has no fixed solution. It is a creative pursuit—high quality
-                                        craftsmanship conveys meaning.
-                                    </p>
-
-                                    <!-- High-End Structural Content to eliminate the mobile void -->
-                                    <div class="intro-core-focus">
-                                        <div class="focus-item">
-                                            <span class="focus-number">01 /</span>
-                                            <span class="focus-text">Frontend Architecture</span>
-                                        </div>
-                                        <div class="focus-item">
-                                            <span class="focus-number">02 /</span>
-                                            <span class="focus-text">Interactive Interfaces</span>
-                                        </div>
-                                        <div class="focus-item">
-                                            <span class="focus-number">03 /</span>
-                                            <span class="focus-text">Scalable Web Apps</span>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="scroll-hint-container">
-                                        <span class="hint-text">Keep Scrolling or use arrow keys</span>
-                                        <div class="hint-line-wrapper">
-                                            <div class="hint-moving-line"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-slide">
-                                <div class="project-meta-side">
-                                    <div class="project-num">1</div>
-                                    <div class="project-details">
-                                        <h3 class="project-title">Moonlight <span class="badge-label">Beta</span></h3>
-                                        <p class="project-desc">
-                                            A secure, full-stack application engineered to allow students to anonymously
-                                            report incidents of
-                                            misconduct to institutional authorities. Built with emphasis on data
-                                            privacy, secure routing, and
-                                            fluid interface responses.
-                                        </p>
-                                        <div class="project-tech-tags">
-                                            <span class="badge-dark">React</span>
-                                            <span class="badge-dark">Node.js</span>
-                                            <span class="badge-dark">JavaScript</span>
-                                            <span class="badge-dark">MongoDB</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="project-image-side">
-                                    <div class="project-links-overlay">
-                                        <a href="https://moonlighter.netlify.app" target="_blank" rel="noopener noreferrer"
-                                            class="overlay-btn">
-                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="https://github.com/on2onyekachi/moonlight" target="_blank" rel="noopener noreferrer"
-                                            class="overlay-btn">
-                                            <i class="fab fa-github" aria-hidden="true"></i> Source Code
-                                        </a>
-                                    </div>
-                                    <div class="image-container-wrapper">
-                                        <img src="images/m1.jpg" alt="Moonlight Project Screenshot"
-                                            class="project-display-img" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-slide">
-                                <div class="project-meta-side">
-                                    <div class="project-num">2</div>
-                                    <div class="project-details">
-                                        <h3 class="project-title">Weather PWA</h3>
-                                        <p class="project-desc">
-                                            A performance-optimized Progressive Web Application delivering real-time
-                                            atmospheric updates.
-                                            Features asynchronous global location queries and service worker
-                                            implementation for offline access
-                                            to cached histories.
-                                        </p>
-                                        <div class="project-tech-tags">
-                                            <span class="badge-dark">HTML</span>
-                                            <span class="badge-dark">CSS</span>
-                                            <span class="badge-dark">JavaScript</span>
-                                            <span class="badge-dark">Service Workers</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="project-image-side">
-                                    <div class="project-links-overlay">
-                                        <a href="https://myweatherpwapp.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                            class="overlay-btn">
-                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                        </a>
-                                        <a href="https://github.com/on2onyekachi/Weather-PWA" target="_blank"
-                                            rel="noopener noreferrer" class="overlay-btn">
-                                            <i class="fab fa-github" aria-hidden="true"></i> Source Code
-                                        </a>
-                                    </div>
-                                    <div class="image-container-wrapper">
-                                        <img src="images/w1.png" alt="Weather PWA Screenshot"
-                                            class="project-display-img" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-slide">
-                                <div class="project-meta-side">
-                                    <div class="project-num">3</div>
-                                    <div class="project-details">
-                                        <h3 class="project-title">Pacetone</h3>
-                                        <p class="project-desc">
-                                            A communication analytics application that evaluates tone, clarity, and
-                                            structural balance in text.
-                                            Integrated with the Gemini API for deep linguistic critique, delivering
-                                            actionable stylistic
-                                            feedback via a real-time interface.
-                                        </p>
-                                        <div class="project-tech-tags">
-                                            <span class="badge-dark">Next.js</span>
-                                            <span class="badge-dark">TypeScript</span>
-                                            <span class="badge-dark">Tailwind CSS</span>
-                                            <span class="badge-dark">Gemini API</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="project-image-side">
-                                    <div class="project-links-overlay">
-                                        <a href="https://pacetone.vercel.app/" target="_blank" rel="noopener noreferrer"
-                                            class="overlay-btn">
-                                            See Live <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                        </a>
-                                        <span class="overlay-btn opacity-disabled">
-                                            <i class="fas fa-lock" aria-hidden="true"></i> Codebase Private
-                                        </span>
-                                    </div>
-                                    <div class="image-container-wrapper">
-                                        <img src="images/p1.png" alt="Pacetone Project Screenshot"
-                                            class="project-display-img" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-inner">
-                        <div class="project-github-cta">
-                            <a href="https://github.com/on2onyekachi" class="link-btn-style" target="_blank"
-                                rel="noopener noreferrer">
-                                More on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="contact text-light" id="contact">
-                <div class="section-header scroll-animate">
-                    <h2 class="section-heading d-flex justify-content-center">Contact</h2>
-                    <div class="underline"></div>
-                </div>
-            
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-center">
-                        <div class="row contact-wrapper">
-            
-                            <div class="col-md-6 gsap-contact-form">
-                                <div class="contact-container form-side">
-                                    <h4 class="sent-notification"></h4>
-                                    <form class="contact-form" id="myForm" method="POST" data-netlify="true"
-                                        netlify-honeypot="bot-field">
-                                        <p style="display:none" aria-hidden="true">
-                                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                                        </p>
-                                        <div class="form-field">
-                                            <label class="form-label" for="name">Name</label>
-                                            <input class="contact-input" type="text" name="name" id="name"
-                                                placeholder="Your full name" maxlength="80" required
-                                                autocomplete="name">
-                                        </div>
-                                        <div class="form-field">
-                                            <label class="form-label" for="email">Email</label>
-                                            <input class="contact-input" type="email" id="email" name="email"
-                                                placeholder="your@email.com" maxlength="80" required
-                                                autocomplete="email">
-                                        </div>
-                                        <div class="form-field">
-                                            <label class="form-label" for="subject">Subject</label>
-                                            <input class="contact-input" type="text" id="subject" name="subject"
-                                                placeholder="What's this about?" maxlength="100" required>
-                                        </div>
-                                        <div class="form-field">
-                                            <label class="form-label" for="message">Message</label>
-                                            <textarea id="message" cols="1" rows="5" name="message"
-                                                placeholder="What can I do for you?" maxlength="500" required></textarea>
-                                        </div>
-                                        <input class="contact-form-btn" type="submit" value="Send Message">
-                                    </form>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-6 gsap-contact-info">
-                                <div class="contact-container info-side">
-                                    <h2 class="text-head"> <span class="color-g">Get</span> in touch</h2>
-                                    <p class="text-muted-desc">Let's stay connected. Feel free to reach out to me.</p>
-                                    <div class="contact-info">
-                                        <ul class="details">
-                                            <li>
-                                                <i class="fas fa-map-marker-alt color-g"></i>
-                                                <span>Lagos, Nigeria</span>
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-envelope color-g"></i>
-                                                <span>onyekachiokwuolisa@gmail.com</span>
-                                            </li>
-                                        </ul>
-                                        <div class="social-media">
-                                            <a href="https://github.com/on2onyekachi" target="_blank"
-                                                rel="noopener noreferrer" class="social-media-link"
-                                                aria-label="View my GitHub profile">
-                                                <i class="fab fa-github" aria-hidden="true"></i>
-                                            </a>
-
-                                            <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank"
-                                                rel="noopener noreferrer" class="social-media-link"
-                                                aria-label="Connect on LinkedIn">
-                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                            </a>
-
-                                            <a href="https://twitter.com/kachi_okwuolisa" target="_blank"
-                                                rel="noopener noreferrer" class="social-media-link"
-                                                aria-label="Follow on X (Twitter)">
-                                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-inner">
-                <small class="copyright">© Onyekachi Okwuolisa. All rights reserved.</small>
-                <span class="footer-mark">Built with craft.</span>
+              </details>
             </div>
-        </footer>
-    </div>
-    <script src="stylesheet/js/lib/tilt.js"></script>
-    <script type="text/javascript" src="stylesheet/js/main.js"></script>
-</body>
+            <a class="project-image-link" href="work/chylitics.html" aria-label="Read the Chylitics case study">
+              <img src="images/cases/chylitics-home.png" alt="Chylitics home page with revenue, profit, margin and units sold" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+          </article>
 
+          <article class="project-row">
+            <div class="project-copy">
+              <h3>Freedom Connect</h3>
+              <p class="project-description">
+                A marketplace, jobs board, events hub and community network for a business alliance, where every listing is checked before it goes live.
+              </p>
+              <div class="project-links">
+                <a href="work/freedom-connect.html">Read the case study <span aria-hidden="true">→</span></a>
+                <a href="https://freedom-connect.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>
+                <span class="project-private">Code is private</span>
+              </div>
+              <details class="project-more">
+                <summary>See more <span class="project-more-icon" aria-hidden="true"></span></summary>
+                <div class="project-more-body">
+                  <dl>
+                    <div><dt>Problem</dt><dd>Members of the alliance needed one trusted place to find each other’s businesses, events and job openings.</dd></div>
+                    <div><dt>Solution</dt><dd>A searchable directory of verified providers, events with registration, a jobs board and communities, with an admin area that approves listings and reviews big edits before they go public.</dd></div>
+                    <div><dt>My role</dt><dd>Full-stack build for TechHub, from the database and access rules to every screen.</dd></div>
+                  </dl>
+                  <ul class="project-tags" aria-label="Technologies">
+                    <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>Framer Motion</li><li>Vitest</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <a class="project-image-link" href="work/freedom-connect.html" aria-label="Read the Freedom Connect case study">
+              <img src="images/cases/freedom-providers.png" alt="Freedom Connect provider search with filters and verified businesses" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+          </article>
+
+          <article class="project-row">
+            <div class="project-copy">
+              <h3>Pacetone</h3>
+              <p class="project-description">
+                Scores a draft for empathy, directness and leadership, points out the exact phrases that hurt its tone, and rewrites it to fit your goal.
+              </p>
+              <div class="project-links">
+                <a href="work/pacetone.html">Read the case study <span aria-hidden="true">→</span></a>
+                <a href="https://pacetone.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>
+                <span class="project-private">Code is private</span>
+              </div>
+              <details class="project-more">
+                <summary>See more <span class="project-more-icon" aria-hidden="true"></span></summary>
+                <div class="project-more-body">
+                  <dl>
+                    <div><dt>Problem</dt><dd>Written messages get read in a tone the writer never meant, and nobody tells you until the damage is done.</dd></div>
+                    <div><dt>Solution</dt><dd>Three named scores instead of one vague grade, highlights on the phrases behind each score, and a rewrite in your own voice.</dd></div>
+                    <div><dt>My role</dt><dd>Product design and the full build, from the scoring screen to sign-in, with automated accessibility checks in the end-to-end tests.</dd></div>
+                  </dl>
+                  <ul class="project-tags" aria-label="Technologies">
+                    <li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Gemini API</li><li>PostgreSQL</li><li>Prisma</li><li>Playwright</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <a class="project-image-link" href="work/pacetone.html" aria-label="Read the Pacetone case study">
+              <img src="images/p1.png" alt="Pacetone scoring a message for empathy, directness and leadership" width="1915" height="952" loading="lazy" decoding="async">
+            </a>
+          </article>
+
+          <article class="project-row">
+            <div class="project-copy">
+              <h3>Emole Futures</h3>
+              <p class="project-description">
+                The new website of a Canadian not-for-profit that runs STEM, AI, business and leadership programs for Black youth, moved off Wix and rebuilt so funders can see the work.
+              </p>
+              <div class="project-links">
+                <a href="work/emole.html">Read the case study <span aria-hidden="true">→</span></a>
+                <a href="https://www.emolefutures.org/" target="_blank" rel="noopener noreferrer">Visit project <span aria-hidden="true">↗</span></a>
+              </div>
+              <details class="project-more">
+                <summary>See more <span class="project-more-icon" aria-hidden="true"></span></summary>
+                <div class="project-more-body">
+                  <dl>
+                    <div><dt>Problem</dt><dd>The old site hadn’t been updated since it launched, even though the programs had grown, and it didn’t answer what a grant reviewer needs to know.</dd></div>
+                    <div><dt>Solution</dt><dd>A fast, plain-HTML site with real program photos, pages for impact, governance and safeguarding, news updates, and registration and volunteer forms.</dd></div>
+                    <div><dt>My role</dt><dd>Planning, design, build and ongoing management of the site through Informanos.</dd></div>
+                  </dl>
+                  <ul class="project-tags" aria-label="Technologies">
+                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python build script</li><li>Netlify Functions</li><li>Accessibility (WCAG)</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+            <a class="project-image-link" href="work/emole.html" aria-label="Read the Emole Futures case study">
+              <img src="images/cases/emole-home.png" alt="Emole Futures home page with a photo of youth volunteers and instructors" width="1440" height="900" loading="lazy" decoding="async">
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Good software should feel considered.</h2>
+        <div class="about-copy">
+          <p>
+            I’m Onyekachi, a frontend software engineer in Lagos. I build with React, Next.js and TypeScript, and work across the stack when a product needs it.
+          </p>
+          <p class="about-now">
+            I currently work with Informanos, a Canadian analytics and AI company, building data platforms and client websites from the database to the last screen.
+          </p>
+          <p>
+            Graduated as a chemical engineer, and I still care most about the same things: clear systems, accessible details, and the small decisions that make a product easier to use.
+          </p>
+          <button class="stack-open" type="button" data-open-stack>
+            See my periodic tech stack <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="footer-label">Have a project in mind?</p>
+        <a class="footer-email" href="mailto:onyekachiokwuolisa@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+        <p class="footer-copy">
+          <span>onyekachiokwuolisa@gmail.com</span>
+          <button type="button" data-copy="onyekachiokwuolisa@gmail.com">Copy</button>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>Onyekachi Okwuolisa</p>
+        <nav aria-label="Social links">
+          <a href="https://github.com/on2onyekachi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/kachi_okwuolisa" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </nav>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <!-- My periodic tech stack: opened from the nav and the About section -->
+    <dialog class="stack-dialog" aria-labelledby="stack-title">
+      <div class="card-rig stack-rig">
+        <span class="card-nail" aria-hidden="true"></span>
+        <div class="card-swing stack-swing">
+          <svg class="card-string" viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><polyline points="10,16 50,0 90,16" /></svg>
+          <div class="stack-panel">
+            <button class="stack-close" type="button" data-close-stack>Close <span aria-hidden="true">✕</span></button>
+            <div class="periodic">
+              <div class="el el-html frontend" data-symbol="Ht"><span class="el-name">HTML5</span><img src="images/icons8-html-5-48.png" alt=""></div>
+              <div class="periodic-key">
+                <h2 id="stack-title">My periodic <span>tech stack</span></h2>
+                <p>The elements I build with — trained as a chemical engineer, I couldn’t resist.</p>
+              </div>
+              <div class="el el-js frontend" data-symbol="Js"><span class="el-name">JavaScript</span><img src="images/icons8-javascript-48.png" alt=""></div>
+              <div class="el el-css frontend" data-symbol="Cs"><span class="el-name">CSS3</span><img src="images/icons8-css3-48.png" alt=""></div>
+              <div class="el el-tailwind frontend" data-symbol="Tw"><span class="el-name">Tailwind</span><img src="images/icons8-tailwindcss-48.png" alt=""></div>
+              <div class="el el-node backend" data-symbol="No"><span class="el-name">Node.js</span><img src="images/icons8-node-js-48.png" alt=""></div>
+              <div class="el el-ts frontend" data-symbol="Ts"><span class="el-name">TypeScript</span><img src="images/icons8-typescript-48.png" alt=""></div>
+              <div class="el el-react frontend" data-symbol="Re"><span class="el-name">React</span><img src="images/icons8-react-native-48.png" alt=""></div>
+              <div class="el el-next frontend" data-symbol="Nx"><span class="el-name">Next.js</span><img src="images/icons8-next.js-48.png" alt=""></div>
+              <div class="el el-postgres database" data-symbol="Pg"><span class="el-name">PostgreSQL</span><img src="images/icons8-postgresql-48.png" alt=""></div>
+              <div class="el el-firebase database" data-symbol="Fb"><span class="el-name">Firebase</span><img src="images/icons8-firebase-48.png" alt=""></div>
+              <div class="el el-git tool" data-symbol="Gt"><span class="el-name">Git</span><img src="images/icons8-git-48.png" alt=""></div>
+            </div>
+            <ul class="periodic-legend" aria-label="Key">
+              <li><b>FE</b> Frontend</li><li><b>BE</b> Backend</li><li><b>DB</b> Database</li><li><b>TL</b> Tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bird-layer" aria-hidden="true">
+        <div class="bird bird--stack" aria-hidden="true">
+          <svg viewBox="0 0 64 48">
+            <g class="bird-body">
+              <path class="bird-tail" d="M16 29 L2 24 L5 31 L3 36 Z" />
+              <path d="M14 30 C14 22 22 17.5 31 17.5 C37 17.5 41 19 43.5 21.5 C45 17 49.5 15.5 52.5 18 L59 20.5 L53 23 C52.5 27 50 30 46 32.5 C42 36.5 35 38.5 28.5 38 C20.5 37.5 14 35 14 30 Z" />
+              <circle class="bird-eye" cx="51.2" cy="19.6" r="1.25" />
+              <g class="bird-legs"><path d="M30 37.5 L29 45 M34.5 37.5 L35.5 45 M27 45 L31.5 45 M33 45 L38 45" /></g>
+            </g>
+            <path class="bird-wing" d="M41 24 C34 18.5 22 18 11 23.5 C19 26.5 29 30 38 30 C40.5 29 41.5 26.5 41 24 Z" />
+          </svg>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="stylesheet/js/editorial-v6.js" defer></script>
+    <script src="stylesheet/js/font-lab.js" defer></script>
+  </body>
 </html>
