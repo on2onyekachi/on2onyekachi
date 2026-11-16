@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#17181b" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Freedom Connect case study: a marketplace, jobs board, events hub and community network where every listing is checked before it goes live. Built by Onyekachi Okwuolisa.">
+    <title>Freedom Connect — Onyekachi Okwuolisa</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap">
+    <link rel="stylesheet" href="../stylesheet/css/site.css">
+    <link rel="stylesheet" href="../stylesheet/css/case-study.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#overview">Skip to the case study</a>
+
+    <header class="case-top">
+      <a href="../index.html#work">← Selected work</a>
+      <span class="read">4 minute read</span>
+    </header>
+
+    <main class="case-wrap">
+      <section class="case-intro">
+        <h1>One trusted place for a community’s businesses, jobs and events.</h1>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>Full-stack engineering for TechHub</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Platform</dt><dd>Web, desktop and mobile</dd></div>
+          <div><dt>Status</dt><dd>Live demo · <a href="https://freedom-connect.vercel.app/" target="_blank" rel="noopener noreferrer">Visit the site ↗</a></dd></div>
+        </dl>
+      </section>
+
+      <figure class="case-figure case-hero reveal">
+        <div class="case-mat">
+          <img class="desk" fetchpriority="high" src="../images/cases/freedom-home.webp" alt="Freedom Connect home page with a search bar for providers, expressions and categories" width="1440" height="900">
+          <img class="phone" src="../images/cases/freedom-mobile.webp" alt="Freedom Connect on a phone" width="390" height="844">
+        </div>
+      </figure>
+
+      <div class="case-body">
+        <nav class="case-toc" aria-label="Case study sections">
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#outcome">Outcome</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          <section class="case-section reveal" id="overview">
+            <h2>Overview</h2>
+            <p class="lede">Freedom Connect is the marketplace, jobs board, events hub and community network for the TPH Marketplace Alliance, a network of entrepreneurs, professionals and business leaders.</p>
+            <p>I built it for TechHub, from the database and its access rules to every public page and the admin area behind them.</p>
+          </section>
+
+          <section class="case-section reveal" id="problem">
+            <h2>A directory is only useful if people trust it.</h2>
+            <p>Members wanted one place to find each other’s businesses, events and job openings. But an open directory fills up with listings nobody has checked, and once people stop trusting it, they stop using it.</p>
+            <p>So the hard part wasn’t the pages. It was deciding who can publish what, and who checks it first.</p>
+          </section>
+
+          <section class="case-section reveal" id="approach">
+            <h2>Three rules I built around.</h2>
+            <ul class="case-principles">
+              <li><strong>Checked before public</strong><span>New providers and job posts wait for an admin. Nothing goes live just because someone submitted it.</span></li>
+              <li><strong>Big edits get a second look</strong><span>When a verified provider makes a major change, it goes back for review, and the approval is tied to the exact version the admin saw.</span></li>
+              <li><strong>Roles live in the database</strong><span>Members, providers and admins are enforced by database rules, so a bug in a page can’t expose what a role shouldn’t see.</span></li>
+            </ul>
+          </section>
+
+          <section class="case-section" id="solution">
+            <h2>Four hubs, one standard of trust.</h2>
+
+            <div class="case-feature reveal">
+              <h3>Find a provider you can trust</h3>
+              <p>Search by name, expression and category, filter to verified providers only, and open a full profile with services, contact details and member reviews.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/freedom-providers.webp" alt="Provider search with filters and featured verified providers" width="1440" height="900" loading="lazy" decoding="async"></div>
+                <figcaption>Search with several filters at once, and a verified-only switch.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>Events with registration built in</h3>
+              <p>Conferences, seminars, masterclasses and networking events, filtered by type and date, with a registration form on each event.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/freedom-events.webp" alt="Events hub with upcoming events and filters by type and date" width="1440" height="900" loading="lazy" decoding="async"></div>
+                <figcaption>Upcoming events and a past-events archive.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>Jobs from businesses the community knows</h3>
+              <p>Only verified businesses can post roles, and every post is reviewed before it appears, which is explained right next to the listings.</p>
+              <figure class="case-figure">
+                <div class="case-mat"><img class="desk" src="../images/cases/freedom-jobs.webp" alt="Jobs board with featured opportunities and a note on how roles get listed" width="1440" height="900" loading="lazy" decoding="async"></div>
+                <figcaption>The rules for posting are shown to the people reading the posts.</figcaption>
+              </figure>
+            </div>
+
+            <div class="case-feature reveal">
+              <h3>An admin area for the people keeping it clean</h3>
+              <p>Admins approve providers and jobs, manage events and communities, review pending changes and see an activity log of who did what.</p>
+            </div>
+          </section>
+
+          <section class="case-section reveal" id="outcome">
+            <h2>Where it stands.</h2>
+            <p>The full platform runs as a live demo with test accounts while the alliance prepares to launch.</p>
+            <div class="case-stats">
+              <div><b>81</b><span>database access rules across members, providers and admins</span></div>
+              <div><b>76</b><span>automated test files</span></div>
+              <div><b>32</b><span>pages, from public hubs to the admin area</span></div>
+            </div>
+            <ul class="case-tags" aria-label="Technologies">
+              <li>Next.js 16</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Row-level security</li><li>Tailwind CSS</li><li>Framer Motion</li><li>Vitest</li><li>Vercel</li>
+            </ul>
+          </section>
+
+          <section class="case-section reveal" id="reflection">
+            <h2>Reflection</h2>
+            <p>Moderation sounds like an admin feature, but it shaped the whole product: what a provider sees after submitting, what a member can trust, and what the database has to guarantee. Designing the review flow first made every page after it simpler.</p>
+          </section>
+        </div>
+      </div>
+
+      <a class="case-next reveal" href="pacetone.html">
+        <div><small>Next project</small><strong>Pacetone</strong></div>
+        <div class="case-mat"><img class="desk" src="../images/cases/pacetone-home.webp" alt="" width="1440" height="900" loading="lazy" decoding="async"></div>
+      </a>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <p class="footer-label">Have a project in mind?</p>
+        <a class="footer-email" href="mailto:onyekachiokwuolisa@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+        <p class="footer-copy">
+          <span>onyekachiokwuolisa@gmail.com</span>
+          <button type="button" data-copy="onyekachiokwuolisa@gmail.com">Copy</button>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>Onyekachi Okwuolisa</p>
+        <nav aria-label="Social links">
+          <a href="https://github.com/on2onyekachi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/onyekachi-okwuolisa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://twitter.com/kachi_okwuolisa" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </nav>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="../stylesheet/js/case-study.js" defer></script>
+  </body>
+</html>

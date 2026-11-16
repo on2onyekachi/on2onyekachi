@@ -1,2 +1,14 @@
+# editor
 .vscode
 .vscode/*
+
+# dependencies
+node_modules
+
+# design explorations, old experiments and their assets (kept locally only)
+design-previews/
+
+# system files
+.DS_Store
+Thumbs.db
+desktop.ini
