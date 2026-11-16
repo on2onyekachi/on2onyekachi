@@ -1,4 +1,4 @@
-/* Case study pages (work/*.html). Builds on editorial-v6.css tokens. */
+/* Case study pages (work/*.html). Builds on site.css tokens. */
 
 .case-top {
   display: flex;
@@ -31,13 +31,6 @@
   padding: 9vh 0 6vh;
 }
 
-.case-label {
-  margin: 0 0 22px;
-  color: var(--color-muted);
-  font-size: 15px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 .case-intro h1 {
   max-width: 15ch;

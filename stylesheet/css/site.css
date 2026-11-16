@@ -395,11 +395,6 @@ img {
   max-width: 420px;
 }
 
-.project-category {
-  margin: 0 0 12px;
-  color: var(--color-muted);
-  font-size: var(--type-small);
-}
 
 .project-copy h3 {
   margin: 0;
